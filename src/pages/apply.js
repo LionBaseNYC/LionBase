@@ -1,20 +1,24 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { compose } from 'react-compose';
-import Helmet from 'react-helmet';
-import pic01 from '../assets/images/pic01.jpg';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { compose } from 'react-compose'
+import Helmet from 'react-helmet'
+
+import Layout from '../components/layout'
+
+import pic01 from '../assets/images/pic01.jpg'
+
 
 class Apply extends Component {
 
-  static propTypes = {};
+  static propTypes = {}
 
-  state = {};
+  state = {}
 
   render() {
-    const siteTitle = 'Apply';
+    const siteTitle = 'Apply'
 
     return (
-      <React.Fragment>
+      <Layout title={siteTitle}>
         <Helmet title={siteTitle}/>
 
         <section id="one" className="main style1">
@@ -33,10 +37,10 @@ class Apply extends Component {
             </div>
           </div>
         </section>
-      </React.Fragment>
-    );
+      </Layout>
+    )
   }
 }
 
 export default compose(
-)(Apply);
+)(Apply)

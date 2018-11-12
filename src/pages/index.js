@@ -13,7 +13,7 @@ class Homepage extends React.Component {
     const siteTitle = 'LionBase @ CU';
 
     return (
-      <Layout>
+      <Layout title={siteTitle}>
         <Helmet title={siteTitle}/>
 
         <section id="one" className="main style1">
