@@ -8,4 +8,7 @@ Current projects involve natural language processing, machine learning, statisti
 
 Involvement is a serious (avg. 4 - 6 hours/week), but rewarding commitment. Students work together, learn together, and grow together on exciting projects with real impact. In order to ensure companies are valuing students properly, we ask all industry partners to provide payments to LionBase. These funds go towards group expenses and towards an applications-based stipend, with priority for involved students on financial aid.
 
-**Run `gatsby develop` in the terminal to start.**
+
+## Development
+
+Run `gatsby develop` in the terminal to start the development server.
