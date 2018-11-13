@@ -1,33 +1,9 @@
-# gatsby-starter-photon
-Gatsby.js V2 starter based on the Photon site template, designed by HTML5 UP. Check out https://codebushi.com/gatsby-starters/ for more Gatsby starters and templates.
+# lionbase.nyc
 
-## Preview
+LionBase is a new student-led data product development group at Columbia University that focuses on exploratory projects with industry applications. At its core, LionBase is about building a community of students who want to explore various data science fields such as Natural Language Processing, Data Analytics, Machine Learning, and more under the context of real-world data problems. Each project is tied to real NYC companies. Past projects include a novel database system and data management application for music publishers and an exploratory crypto-asset web application for iterating portfolio optimizations and risk management procedures for companies in the blockchain industry. 
 
-https://gatsby-photon.surge.sh
+Each student involved falls under two different tracks: Data Science or Product Development. Student teams are put together on a project-basis towards either client projects or mentored projects. Client projects are for driven students who are able to work autonomously and iteratively with clients. Mentored projects will be for students who want more structure in learning how to get involved with projects. This is a great option for students who want to become familiar with using technologies (like React, NodeJS, Rstudio, matplotlib, pandas, Bokeh, Django, etc.) or mathematical methods (like risk analysis, optimizations, etc.) that are used in real client projects before jumping in.
 
-## Installation
+Current projects involve natural language processing, machine learning, statistical anomaly detection, and full-stack development. More projects are anticipated for the Spring semester. Not all projects require CS experience.
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new gatsby-starter-photon https://github.com/codebushi/gatsby-starter-photon`
-
-Run `gatsby develop` in the terminal to start.
-
-## CSS Grid
-
-The grid on this site was replaced with a custom version, built using CSS Grid. It's a very simple 12 column grid that is disabled on mobile. To start using the grid, wrap the desired items with `grid-wrapper`. Items inside the `grid-wrapper` use the class `col-` followed by a number, which should add up to 12.
-
-Here is an example of using the grid, for a 3 column layout:
-
-```
-<div className="grid-wrapper">
-    <div className="col-4">
-        <p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
-    </div>
-    <div className="col-4">
-        <p>Content Here</p>
-    </div>
-    <div className="col-4">
-        <p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
-    </div>
-</div>
-```
+Involvement is a serious (avg. 4 - 6 hours/week), but rewarding commitment. Students work together, learn together, and grow together on exciting projects with real impact. In order to ensure companies are valuing students properly, we ask all industry partners to provide payments to LionBase. These funds go towards group expenses and towards an applications-based stipend, with priority for involved students on financial aid.
