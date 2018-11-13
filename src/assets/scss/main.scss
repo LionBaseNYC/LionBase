@@ -4,6 +4,7 @@
 @import "libs/skel";
 @import url('../css/font-awesome.min.css');
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i');
 @import "css-grid";
 
 /*
@@ -41,10 +42,14 @@ body {
 
 body, input, select, textarea {
   color: _palette(fg);
-  font-family: _font(family);
+  font-family: _font(family-main);
   font-size: 16pt;
   font-weight: _font(weight);
   line-height: 1.65em;
+}
+
+#header-container {
+  font-family: _font(family);
 }
 
 a {
@@ -76,6 +81,7 @@ h1, h2, h3, h4, h5, h6 {
   color: _palette(fg-bold);
   line-height: 1em;
   margin: 0 0 (_size(element-margin) * 0.5) 0;
+  font-weight: _font(weight-bold);
 
   a {
     color: inherit;
@@ -548,6 +554,7 @@ ul {
   list-style: disc;
   margin: 0 0 _size(element-margin) 0;
   padding-left: 1em;
+  display: flex;
 
   li {
     padding-left: 0.5em;
@@ -589,18 +596,28 @@ ul {
     }
   }
 
+  &.card-container {
+    .grid-card {
+      max-width: 300px;
+      //height: 200px;
+    }
+  }
+
   &.major-icons {
     list-style: none;
     padding-left: 0;
+    margin: 0 auto;
+    display: inline-flex;
 
     li {
       display: inline-block;
-      padding: 2.5em;
+      padding: 0 2.5em;
       text-align: center;
 
       .icon {
-        @include vendor('transform', 'rotate(45deg)');
-        border-radius: _size(border-radius);
+        //@include vendor('transform', 'rotate(45deg)');
+        //border-radius: _size(border-radius);
+        border-radius: 100%;
         border: solid 1px _palette(border);
         display: inline-block;
         height: 8em;
@@ -610,10 +627,13 @@ ul {
         width: 8em;
 
         &:before {
-          @include vendor('transform', 'rotate(-45deg)');
+          //@include vendor('transform', 'rotate(-45deg)');
           display: inline-block;
           line-height: inherit;
         }
+      }
+      h3 {
+        margin: 1em 0 0.5em 0;
       }
     }
   }
@@ -622,6 +642,7 @@ ul {
     cursor: default;
     list-style: none;
     padding-left: 0;
+    justify-content: center;
 
     li {
       display: inline-block;
@@ -944,25 +965,62 @@ button,
 
   &.style1 {
     background: _palette(bg);
+    text-align: center;
+    .page-section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
   }
 
   &.style2 {
     @include dark(#333);
-    background-attachment: fixed, fixed;
-    background-image: url('../images/overlay1.png'), url('../images/header.jpg');
-    background-size: auto, cover;
+    //background-attachment: fixed, fixed;
+    ////background-image: url('../images/overlay1.png'), url('../images/header.jpg');
+    //background-size: auto, cover;
+    background-attachment: fixed, fixed, fixed;
+    background-image: url('../images/overlay2.png'), radial-gradient(circle at 20%, _palette(accent5-alt) 20%, _palette(secondary1-alt) 200%, _palette(accent5-alt));
+    background-position: top left, center center, center center;
+    background-size: auto, cover, cover;
+    text-align: center;
+  }
+
+  &.style3 {
+    background: _palette(fg-light);
+    text-align: center;
+    .page-section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+
+  &.style7 {
+    background: _palette(fg-lighter);
+    text-align: center;
+    .page-section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  }
+
+  .page-section {
+    max-width: 900px;
+    margin: 0 auto;
   }
 }
 
 /* Header */
 
-#header {
-  @include padding(9em, 0, (0, 0, _size(element-margin), 0));
+#header-container {
   @include dark(#4686a0);
   background-attachment: fixed, fixed, fixed;
-  background-image: url('../images/overlay2.png'), url('../images/overlay3.svg'), linear-gradient(45deg, _palette(accent1-alt) 5%, _palette(accent3-alt) 30%, _palette(accent6-alt));
+  background-image: url('../images/overlay2.png'), url('../images/overlay3.svg'), linear-gradient(45deg, _palette(accent1-alt) 5%, _palette(accent3-alt) 40%, _palette(accent4-alt));
   background-position: top left, center center, center center;
   background-size: auto, cover, cover;
+
+}
+
+#header {
+  @include padding(9em, 0, (0, 0, _size(element-margin), 0));
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -975,8 +1033,15 @@ button,
     margin: (_size(element-margin) * 0.5) 0 0 0;
   }
 
+  .actions-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
   .actions {
-    margin: (_size(element-margin) * 1.25) 0 0 0;
+    margin: (_size(element-margin) * 1.25) 1em 0 1em;
     position: relative;
 
     &:after {
@@ -1000,7 +1065,7 @@ button,
 
     .actions {
       @include vendor('transition', 'transform 1.25s ease');
-      @include vendor('transition-delay', '1s');
+      @include vendor('transition-delay', '0.2s');
       @include vendor('transform', 'translateY(0)');
       opacity: 1;
     }
@@ -1016,10 +1081,16 @@ button,
     position: absolute;
     top: 0;
     width: 100%;
+
+    //z-index: -1;
   }
+
 }
 
 .body.is-loading {
+  #header-container {
+
+  }
   #header {
     .inner {
       @include vendor('transform', 'scale(1.05)');
@@ -1030,7 +1101,6 @@ button,
         opacity: 0;
       }
     }
-
     &:after {
       opacity: 1;
     }
@@ -1043,7 +1113,9 @@ button,
   @include padding(6em, 0, (0, 0, _size(element-margin), 0));
   @include dark(#4686a0);
   background-attachment: fixed, fixed, fixed;
-  background-image: url('../images/overlay2.png'), url('../images/overlay4.svg'), linear-gradient(45deg, _palette(accent6-alt), _palette(accent3-alt) 50%, _palette(accent1-alt) 95%);
+  //background-image: url('../images/overlay2.png'), url('../images/overlay3.svg'), linear-gradient(45deg, _palette(accent1-alt) 5%, _palette(accent3-alt) 40%, _palette(accent4-alt));
+
+  background-image: url('../images/overlay2.png'), url('../images/overlay4.svg'), linear-gradient(45deg, _palette(accent4-alt), _palette(accent3-alt) 60%, _palette(accent1-alt) 95%);
   background-position: top left, center center, center center;
   background-size: auto, cover, cover;
   text-align: center;
@@ -1202,6 +1274,11 @@ button,
 
   #two {
     text-align: center;
+    .card-container {
+      flex-wrap: wrap;
+      /* text-align: center; */
+      justify-content: center;
+    }
   }
 
 }
@@ -1283,7 +1360,7 @@ button,
     @include padding(4em, 3em, (0, 0, _size(element-margin), 0));
 
     .actions {
-      margin: _size(element-margin) 0 0 0;
+      margin: _size(element-margin) 1em 0 1em;
     }
   }
 
@@ -1358,6 +1435,13 @@ button,
 
   #header {
     @include padding(4em, 2em, (0, 0, _size(element-margin), 0));
+
+    .actions {
+      a {
+        font-size: small;
+        padding: 0.1em;
+      }
+    }
 
     br {
       display: none;

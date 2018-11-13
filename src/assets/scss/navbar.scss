@@ -1,8 +1,46 @@
-.navbar {
+@import "libs/skel";
+
+@include skel-breakpoints((
+        xlarge: '(max-width: 1680px)',
+        large: '(max-width: 1280px)',
+        medium: '(max-width: 980px)',
+        small: '(max-width: 736px)',
+        xsmall: '(max-width: 480px)',
+        xxsmall: '(max-width: 360px)'
+));
+
+#header {
+  padding: 3em 0 4em 0;
+}
+
+#navbar {
+  text-align: right;
+  display: flex;
+
+  .grow {
+    flex: 1;
+  }
 
   .nav-item {
-    margin: 0 1em;
+    margin: 1em 1.2em;
     display: inline;
-    z-index: 999!important;
+    font-weight: bolder;
+
+    a {
+      border-bottom: none;
+    }
+  }
+}
+
+
+@include breakpoint(small) {
+  #navbar {
+    flex-wrap: wrap;
+    text-align: center;
+
+    .nav-item {
+      flex-basis: 100%;
+
+    }
   }
 }

@@ -11,10 +11,11 @@ class NavBar extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="navbar">
+        <div id="navbar">
           <div className="nav-item">
-            <Link to="/">Home</Link>
+            <Link to="/">LionBase</Link>
           </div>
+          <div className="grow"></div>
           <div className="nav-item">
             <Link to="/about">About</Link>
           </div>

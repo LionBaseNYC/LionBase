@@ -1,26 +1,29 @@
 import React from 'react'
 import NavBar from './NavBar'
+import { Link } from 'gatsby'
 
 class Header extends React.Component {
 
   static defaultProps = {
     title: 'LionBase @ CU',
+    subtitle: 'Subtitle here',
+    icon: null,
+    navbar_children: null,
   }
 
   render() {
-    return (
-      <div>
+    const {title, subtitle, icon, navbar_children} = this.props;
+    var icon_render = (icon === null) ? null : <span className={"icon major " + icon}></span>
 
+    return (
+      <div id="header-container">
+        <NavBar/>
         <section id="header">
-          <NavBar/>
           <div className="inner">
-            <span className="icon major fa-cloud"></span>
-            <h1><strong>{this.props.title}</strong></h1>
-            <p>Accumsan feugiat mi commodo erat lorem ipsum, sed magna<br/>
-              lobortis feugiat sapien sed etiam volutpat accumsan.</p>
-            <ul className="actions">
-              <li><a href="#one" className="button scrolly">Discover</a></li>
-            </ul>
+            {icon_render}
+            <h1><strong>{title}</strong></h1>
+            <p>{subtitle}</p>
+            {navbar_children}
           </div>
         </section>
       </div>

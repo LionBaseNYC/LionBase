@@ -9,20 +9,21 @@ import pic01 from '../assets/images/pic01.jpg'
 import { Link } from 'gatsby'
 
 
-class Projects extends Component {
+class Apply extends Component {
 
   static propTypes = {}
 
   state = {}
 
   render() {
-    const siteTitle = 'Projects'
-    const subTitle = 'Check out our current and previous projects'
+    const siteTitle = 'About Us'
+    const subTitle = 'Learn more about who we are and what we do'
 
     return (
-      <Layout title={siteTitle}
-              subtitle={subTitle}
-              >
+      <Layout
+        title={siteTitle}
+        subtitle={subTitle}
+      >
         <Helmet title={siteTitle}/>
 
         <section id="one" className="main style1">
@@ -47,4 +48,4 @@ class Projects extends Component {
 }
 
 export default compose(
-)(Projects)
+)(Apply)

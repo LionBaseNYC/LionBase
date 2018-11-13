@@ -6,6 +6,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 
 import pic01 from '../assets/images/pic01.jpg'
+import { Link } from 'gatsby'
 
 
 class Apply extends Component {
@@ -16,9 +17,23 @@ class Apply extends Component {
 
   render() {
     const siteTitle = 'Apply'
+    const subTitle = 'Learn more about how you can work with us'
 
     return (
-      <Layout title={siteTitle}>
+      <Layout
+        title={siteTitle}
+        subtitle={subTitle}
+        navbar_children={
+          <div className="actions-box">
+            <ul className="actions">
+              <li><Link to="/apply/#student" className="button scrolly">For Students</Link></li>
+            </ul>
+            <ul className="actions">
+              <li><Link to="/apply/#client" className="button scrolly">For Companies</Link></li>
+            </ul>
+          </div>
+        }
+      >
         <Helmet title={siteTitle}/>
 
         <section id="one" className="main style1">
