@@ -7,3 +7,5 @@ Each student involved falls under two different tracks: Data Science or Product 
 Current projects involve natural language processing, machine learning, statistical anomaly detection, and full-stack development. More projects are anticipated for the Spring semester. Not all projects require CS experience.
 
 Involvement is a serious (avg. 4 - 6 hours/week), but rewarding commitment. Students work together, learn together, and grow together on exciting projects with real impact. In order to ensure companies are valuing students properly, we ask all industry partners to provide payments to LionBase. These funds go towards group expenses and towards an applications-based stipend, with priority for involved students on financial aid.
+
+**Run `gatsby develop` in the terminal to start.**
