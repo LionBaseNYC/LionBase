@@ -7,6 +7,7 @@ import Layout from '../components/layout'
 
 import pic01 from '../assets/images/pic01.jpg'
 import { Link } from 'gatsby'
+import TextRow from '../components/TextRow'
 
 
 class Projects extends Component {
@@ -22,25 +23,74 @@ class Projects extends Component {
     return (
       <Layout title={siteTitle}
               subtitle={subTitle}
-              >
+      >
         <Helmet title={siteTitle}/>
 
-        <section id="one" className="main style1">
-          <div className="grid-wrapper">
-            <div className="col-6">
-              <header className="major">
-                <h2>Lorem ipsum dolor adipiscing<br/>
-                  amet dolor consequat</h2>
-              </header>
-              <p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet
-                vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id
-                accumsan.</p>
+        <TextRow header="Current Projects"
+                 subheader='We work on projects every semester. Take a look at our collaborations for this semester (more to come).'>
+          <div className="grid-wrapper card-container">
+            <div className="col-4">
+              <div className="project-card">
+                <span className="icon major fa-asterisk style2 fit"></span>
+                <h3>Natural Language Processing for PR</h3>
+                <small>Wachsman</small>
+                <p>Wachsman is a leading professional services agency in the blockchain industry. We will develop NLP
+                  models for analyzing</p>
+              </div>
             </div>
-            <div className="col-6">
-              <span className="image fit"><img src={pic01} alt=""/></span>
+            <div className="col-4">
+              <div className="project-card">
+                <span className="icon major fa-asterisk style2 fit"></span>
+                <h3>SA and ML for Song Royalties</h3>
+                <small>Shapiro-Bernstein</small>
+                <p>Wachsman is a leading professional services agency in the blockchain industry. We will develop NLP
+                  models for analyzing</p>
+              </div>
+            </div>
+            <div className="col-4">
+              <div className="project-card">
+                <span className="icon major fa-asterisk style2 fit"></span>
+                <h3>Natural Language Processing for PR</h3>
+                <small>Wachsman</small>
+                <p>Wachsman is a leading professional services agency in the blockchain industry. We will develop NLP
+                  models for analyzing</p>
+              </div>
             </div>
           </div>
-        </section>
+        </TextRow>
+
+        <TextRow header="Past Projects"
+                 subheader='Check out our previous projects.'>
+          <div className="grid-wrapper card-container">
+            <div className="col-4">
+              <div className="project-card">
+                <span className="icon major fa-asterisk style2 fit"></span>
+                <h3>Natural Language Processing for PR</h3>
+                <small>Wachsman</small>
+                <p>Wachsman is a leading professional services agency in the blockchain industry. We will develop NLP
+                  models for analyzing</p>
+              </div>
+            </div>
+            <div className="col-4">
+              <div className="project-card">
+                <span className="icon major fa-asterisk style2 fit"></span>
+                <h3>SA and ML for Song Royalties</h3>
+                <small>Shapiro-Bernstein</small>
+                <p>Wachsman is a leading professional services agency in the blockchain industry. We will develop NLP
+                  models for analyzing</p>
+              </div>
+            </div>
+            <div className="col-4">
+              <div className="project-card">
+                <span className="icon major fa-asterisk style2 fit"></span>
+                <h3>Natural Language Processing for PR</h3>
+                <small>Wachsman</small>
+                <p>Wachsman is a leading professional services agency in the blockchain industry. We will develop NLP
+                  models for analyzing</p>
+              </div>
+            </div>
+          </div>
+        </TextRow>
       </Layout>
     )
   }

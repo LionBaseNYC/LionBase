@@ -1,11 +1,39 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { compose } from 'react-compose'
+import Helmet from 'react-helmet'
+
 import Layout from '../components/layout'
 
-const NotFoundPage = () => (
-  <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+import { Link } from 'gatsby'
+import TextRow from '../components/TextRow'
 
-export default NotFoundPage
+
+class NotFoundPage extends Component {
+
+  static propTypes = {}
+
+  state = {}
+
+  render() {
+    const siteTitle = 'Oops! Page Not Found'
+    const subTitle = 'We are sorry, but the page you requested was not found'
+    const header = ''
+    const subHeader = ''
+
+    return (
+      <Layout
+        title={siteTitle}
+        subtitle={subTitle}
+      >
+        <Helmet title={siteTitle}/>
+
+        <TextRow header={header} subheader={subHeader}/>
+
+
+      </Layout>
+    )
+  }
+}
+
+export default compose(
+)(NotFoundPage)

@@ -7,6 +7,7 @@ import Layout from '../components/layout'
 
 import pic01 from '../assets/images/pic01.jpg'
 import { Link } from 'gatsby'
+import TextRow from '../components/TextRow'
 
 
 class Apply extends Component {
@@ -18,6 +19,8 @@ class Apply extends Component {
   render() {
     const siteTitle = 'About Us'
     const subTitle = 'Learn more about who we are and what we do'
+    const header = 'Our Core Values'
+    const subHeader = 'We take pride in our reputation for quality work. Our mission is to foster a community of student developers, data scientists, and mathematicians who are driven to learn.'
 
     return (
       <Layout
@@ -26,22 +29,27 @@ class Apply extends Component {
       >
         <Helmet title={siteTitle}/>
 
-        <section id="one" className="main style1">
+        <TextRow header={header} subheader={subHeader}>
           <div className="grid-wrapper">
-            <div className="col-6">
-              <header className="major">
-                <h2>Lorem ipsum dolor adipiscing<br/>
-                  amet dolor consequat</h2>
-              </header>
-              <p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet
-                vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id
-                accumsan.</p>
+            <div className="col-4">
+              <span className="icon style3 major fa-user-circle-o fit"></span>
+              <h3>People First</h3>
+              <p>Build relationships together and place users at the center of our work</p>
             </div>
-            <div className="col-6">
-              <span className="image fit"><img src={pic01} alt=""/></span>
+            <div className="col-4">
+              <span className="icon style3 major fa-handshake-o fit"></span>
+              <h3>Communication & Honesty</h3>
+              <p>Speak honestly to each other and to industry partners</p>
+            </div>
+            <div className="col-4">
+              <span className="icon style3 major fa-line-chart fit"></span>
+              <h3>Continuous Growth</h3>
+              <p>Strive to consistently improve personally and professionally</p>
             </div>
           </div>
-        </section>
+
+        </TextRow>
+
       </Layout>
     )
   }

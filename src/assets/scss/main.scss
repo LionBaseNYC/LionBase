@@ -478,6 +478,11 @@ input[type="radio"] {
       color: _palette(accent6);
     }
   }
+  //&.style7 {
+  //  &:before {
+  //    color: _palette(accent2);
+  //  }
+  //}
 
   &.major {
     @include icon;
@@ -534,6 +539,33 @@ input[type="radio"] {
 
     img {
       width: 100%;
+    }
+  }
+}
+
+/* Cards */
+.card-container {
+  .project-card {
+    -webkit-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.73);
+    -moz-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.73);
+    box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.73);
+    border-radius: 5px;
+    padding: 3em 2.5em;
+    text-align: center;
+    margin: 0 0.7em;
+    height: 480px;
+    overflow: hidden;
+
+    h4 {
+      margin: 0 0 0.4em 0;
+    }
+    small {
+      color: _palette(border2);
+      line-height: 2.5em;
+    }
+    p {
+      font-size: 0.8em;
+      line-height: 1.6em;
     }
   }
 }
@@ -966,10 +998,17 @@ button,
   &.style1 {
     background: _palette(bg);
     text-align: center;
-    .page-section {
-      max-width: 900px;
-      margin: 0 auto;
+    .page-section-wrapper {
+      margin-bottom: 1em;
+      .page-section {
+        max-width: 900px;
+        margin: 0 auto;
+        p {
+          margin: 1.5em auto 4em 0;
+        }
+      }
     }
+
   }
 
   &.style2 {
@@ -1048,7 +1087,7 @@ button,
       background: _palette(dark, border);
       content: '';
       height: 100vh;
-      left: 50%;
+      //left: 50%;
       position: absolute;
       top: 100%;
       width: 1px;
@@ -1111,14 +1150,18 @@ button,
 
 #footer {
   @include padding(6em, 0, (0, 0, _size(element-margin), 0));
-  @include dark(#4686a0);
-  background-attachment: fixed, fixed, fixed;
-  //background-image: url('../images/overlay2.png'), url('../images/overlay3.svg'), linear-gradient(45deg, _palette(accent1-alt) 5%, _palette(accent3-alt) 40%, _palette(accent4-alt));
-
-  background-image: url('../images/overlay2.png'), url('../images/overlay4.svg'), linear-gradient(45deg, _palette(accent4-alt), _palette(accent3-alt) 60%, _palette(accent1-alt) 95%);
-  background-position: top left, center center, center center;
-  background-size: auto, cover, cover;
+  //@include dark(#4686a0);
+  //background-attachment: fixed, fixed, fixed;
+  ////background-image: url('../images/overlay2.png'), url('../images/overlay3.svg'), linear-gradient(45deg, _palette(accent1-alt) 5%, _palette(accent3-alt) 40%, _palette(accent4-alt));
+  //
+  //background-image: url('../images/overlay2.png'), url('../images/overlay4.svg'), linear-gradient(45deg, _palette(accent4-alt), _palette(accent3-alt) 60%, _palette(accent1-alt) 95%);
+  //background-position: top left, center center, center center;
+  //background-size: auto, cover, cover;
   text-align: center;
+  justify-content: center;
+  border-top: 2px solid _palette(fg-light);
+  margin-top: 5em;
+  display: flex;
 
   .icons {
     margin: 0;
@@ -1281,6 +1324,15 @@ button,
     }
   }
 
+
+  .card-container {
+    .project-card {
+      height: 100%;
+      margin: 3em 4em;
+      padding-left: 5em;
+      padding-right: 5em;
+    }
+  }
 }
 
 /* Small */
@@ -1368,6 +1420,13 @@ button,
 
   #footer {
     @include padding(3em, 1.5em, (0, 0, _size(element-margin), 0));
+  }
+
+  .card-container {
+    .project-card {
+      padding-left: 4em;
+      padding-right: 4em;
+    }
   }
 
 }
@@ -1469,6 +1528,13 @@ button,
     }
   }
 
+  .card-container {
+    .project-card {
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+  }
+
 }
 
 /* XXSmall */
@@ -1497,6 +1563,13 @@ button,
 
   #footer {
     @include padding(2em, 1em, (0, 0, _size(element-margin), 0));
+  }
+
+  .card-container {
+    .project-card {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
   }
 
 }

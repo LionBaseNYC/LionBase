@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
-import PageHeader from '../components/PageHeader'
+import TextRow from '../components/TextRow'
 
 import { Link } from 'gatsby'
 
@@ -30,7 +30,7 @@ class Homepage extends React.Component {
         }>
         <Helmet title={siteTitle}/>
 
-        <PageHeader header={header} subheader={subHeader}/>
+        <TextRow header={header} subheader={subHeader}/>
 
         <section id="two" className="main style2">
           <ul className="major-icons card-container">
@@ -52,7 +52,7 @@ class Homepage extends React.Component {
             <li>
               <div className="grid-card">
                 <span className="icon style3 major fa-calendar"></span>
-                <h3>How We Work</h3>
+                <h5>How We Work</h5>
                 <p>Students learn through exploratory projects for companies while building genuine relationships.</p>
               </div>
             </li>
@@ -61,55 +61,17 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="three" className="main style3 special">
-          <div className="grid-wrapper">
-            <div className="col-12">
-              <header className="major">
-                <h2>Our Core Values</h2>
-              </header>
-              {/*<p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>*/}
-            </div>
+        <TextRow
+          header="Get Involved"
+          subheader="We are looking for students who like to solve problems, and companies that need to solve problems. Please
+              reach out if you fall under either category!"
+          className="style7"
+        >
+          <ul className="actions uniform">
+            <li><Link to="/apply" className="button special">Apply</Link></li>
+          </ul>
+        </TextRow>
 
-            <div className="col-4">
-              {/*<span className="image fit"><img src={pic02} alt=""/></span>*/}
-              <h3>People First</h3>
-              <p>Build relationships together and place users at the center of our work</p>
-              <ul className="actions">
-                <li><a href="#" className="button">More</a></li>
-              </ul>
-            </div>
-            <div className="col-4">
-              {/*<span className="image fit"><img src={pic03} alt=""/></span>*/}
-              <h3>Communication & Honesty</h3>
-              <p>Speak honestly to each other and to industry partners</p>
-              <ul className="actions">
-                <li><a href="#" className="button">More</a></li>
-              </ul>
-            </div>
-            <div className="col-4">
-              {/*<span className="image fit"><img src={pic04} alt=""/></span>*/}
-              <h3>Continuous Growth</h3>
-              <p>Strive to consistently improve personally and professionally</p>
-              <ul className="actions">
-                <li><a href="#" className="button">More</a></li>
-              </ul>
-            </div>
-
-          </div>
-        </section>
-
-        <section id="four" className="main style7 special">
-          <div className="container">
-            <header className="major">
-              <h2>Get Involved</h2>
-            </header>
-            <p>We are looking for </p>
-            <ul className="actions uniform">
-              <li><a href="#" className="button special">Sign Up</a></li>
-              <li><a href="#" className="button">Learn More</a></li>
-            </ul>
-          </div>
-        </section>
       </Layout>
     )
   }
