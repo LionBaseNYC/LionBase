@@ -5,6 +5,10 @@ import Layout from '../components/layout'
 import TextRow from '../components/TextRow'
 import LionIcon from '../assets/images/lion-simple.png'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCode, faBolt, faCalendar } from '@fortawesome/free-solid-svg-icons'
+
+
 
 import { Link } from 'gatsby'
 
@@ -13,7 +17,7 @@ class Homepage extends React.Component {
     const siteTitle = 'LionBase @ CU'
     const subTitle = 'Columbia student driven solutions for industry problems'
     const header = 'Our Mission'
-    const subHeader = 'LionByte is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications.'
+    const subHeader = 'LionBase is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications.'
 
     return (
       <Layout
@@ -38,7 +42,8 @@ class Homepage extends React.Component {
           <ul className="major-icons card-container">
             <li>
               <div className="grid-card">
-                <span className="icon style1 major fa-code"></span>
+                <FontAwesomeIcon icon={faCode} className="icon style1 major"/>
+                {/*<span className="icon style1 major fa-code"></span>*/}
                 <h3>Who we are</h3>
                 <p>We are a group of Columbia students passionate about working on real-world data problems. </p>
               </div>
@@ -46,15 +51,15 @@ class Homepage extends React.Component {
 
             <li>
               <div className="grid-card">
-                <span className="icon style2 major fa-bolt"></span>
+                <FontAwesomeIcon icon={faBolt} className="icon style2 major"/>
                 <h3>What We Do</h3>
                 <p>We focus on exploring data projects related to Data Analytics, Machine Learning, NLP, Statistical
-                  Analysis, and more..</p>
+                  Analysis, and more.</p>
               </div>
             </li>
             <li>
               <div className="grid-card">
-                <span className="icon style3 major fa-calendar"></span>
+                <FontAwesomeIcon icon={faCalendar} className="icon style1 major"/>
                 <h3>How We Work</h3>
                 <p>Students learn through exploratory projects for companies while building genuine relationships.</p>
               </div>

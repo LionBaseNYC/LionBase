@@ -23,7 +23,7 @@ class NavBar extends Component {
             <Link to="/projects">Projects</Link>
           </div>
           <div className="nav-item">
-            <Link to="/blog">Blog</Link>
+            <a target="_blank" href="https://medium.com/@lionbase.nyc">Blog</a>
           </div>
           <div className="nav-item">
             <Link to="/contact">Contact Us</Link>

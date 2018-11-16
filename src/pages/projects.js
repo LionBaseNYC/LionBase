@@ -8,6 +8,8 @@ import Layout from '../components/layout'
 import { Link } from 'gatsby'
 import TextRow from '../components/TextRow'
 import ProjectCard from '../components/ProjectCard'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAsterisk } from '@fortawesome/free-solid-svg-icons'
 
 
 class Projects extends Component {
@@ -30,7 +32,9 @@ class Projects extends Component {
                  subheader='We work on projects every semester. Take a look at our collaborations for this semester (more to come).'>
           <div className="card-container">
             <div className="project-card">
-              <span className="icon major fa-asterisk style7 fit"></span>
+              <FontAwesomeIcon icon={faAsterisk} className="icon style7 major naked"/>
+
+              {/*<span className="icon major fa-asterisk style7 fit"></span>*/}
               <h3>Natural Language Processing for Blockchain PR</h3>
               <small>Wachsman</small>
               <h4>Company Description</h4>
@@ -52,7 +56,7 @@ class Projects extends Component {
               </p>
             </div>
             <div className="project-card">
-              <span className="icon major fa-asterisk style7 fit"></span>
+              <FontAwesomeIcon icon={faAsterisk} className="icon style7 major naked"/>
               <h3>Anomaly Detection and Machine Learning for Song Royalties</h3>
               <small>Shapiro Bernstein</small>
               <h4>Company Description</h4>
@@ -73,9 +77,9 @@ class Projects extends Component {
               </p>
             </div>
             <div className="project-card">
-              <span className="icon major fa-asterisk style7 fit"></span>
+              <FontAwesomeIcon icon={faAsterisk} className="icon style8 major naked"/>
               <h3>Mentored Project</h3>
-              <small>Wachsman</small>
+              <small>Mentored Project</small>
               <h4>Project Description</h4>
               <p>
                 Select a set of NY residents and create an interactive way for them to explore health data.
@@ -100,14 +104,14 @@ class Projects extends Component {
                  subheader='Check out our previous projects.'>
           <div className="card-container">
             <div className="project-card">
-              <span className="icon major fa-asterisk style7 fit"></span>
+              <FontAwesomeIcon icon={faAsterisk} className="icon style7 major naked"/>
               <h3>Crypto-Asset Risk Management</h3>
               <small>Wachsman</small>
               <p>A modular crypto asset exploration application to iterate portfolio optimizations, risk mitigations,
                 client pricing strategies, and other data insights.</p>
             </div>
             <div className="project-card">
-              <span className="icon major fa-asterisk style7 fit"></span>
+              <FontAwesomeIcon icon={faAsterisk} className="icon style7 major naked"/>
               <h3>Database Systems for Music Publishing</h3>
               <small>Shapiro Bernstein</small>
               <p>A novel database system and software application to enable fast, robust, no-frills data management
