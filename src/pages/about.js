@@ -5,7 +5,6 @@ import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
 
-import pic01 from '../assets/images/pic01.jpg'
 import { Link } from 'gatsby'
 import TextRow from '../components/TextRow'
 
@@ -20,8 +19,7 @@ class Apply extends Component {
     const siteTitle = 'About Us'
     const subTitle = 'Learn more about who we are and what we do'
     const header = 'Our Core Values'
-    const subHeader = 'We take pride in our reputation for quality work. Our mission is to foster a community of student developers, data scientists, and mathematicians who are driven to learn.'
-
+    const subHeader = 'LionBase is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications.'
     return (
       <Layout
         title={siteTitle}

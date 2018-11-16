@@ -3,6 +3,8 @@ import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
 import TextRow from '../components/TextRow'
+import LionIcon from '../assets/images/lion-simple.png'
+
 
 import { Link } from 'gatsby'
 
@@ -17,7 +19,7 @@ class Homepage extends React.Component {
       <Layout
         title={siteTitle}
         subtitle={subTitle}
-        icon='fa-cloud'
+        icon={(<img className="home-icon" src={LionIcon} />)}
         navbar_children={
           <div className="actions-box">
             <ul className="actions">
@@ -41,18 +43,19 @@ class Homepage extends React.Component {
                 <p>We are a group of Columbia students passionate about working on real-world data problems. </p>
               </div>
             </li>
+
             <li>
               <div className="grid-card">
                 <span className="icon style2 major fa-bolt"></span>
                 <h3>What We Do</h3>
-                <p>We focus on exploring data projects related to Analytics, Machine Learning, NLP, Trading, and
-                  more.</p>
+                <p>We focus on exploring data projects related to Data Analytics, Machine Learning, NLP, Statistical
+                  Analysis, and more..</p>
               </div>
             </li>
             <li>
               <div className="grid-card">
                 <span className="icon style3 major fa-calendar"></span>
-                <h5>How We Work</h5>
+                <h3>How We Work</h3>
                 <p>Students learn through exploratory projects for companies while building genuine relationships.</p>
               </div>
             </li>
@@ -67,9 +70,9 @@ class Homepage extends React.Component {
               reach out if you fall under either category!"
           className="style7"
         >
-          <ul className="actions uniform">
-            <li><Link to="/apply" className="button special">Apply</Link></li>
-          </ul>
+          <div className="align-center">
+            <Link to="/apply" className="button style4">Apply</Link>
+          </div>
         </TextRow>
 
       </Layout>

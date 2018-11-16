@@ -38,38 +38,74 @@ class Apply extends Component {
       >
         <Helmet title={siteTitle}/>
 
+        <div id="student"></div>
         <TextRow header="Student Tracks"
-                 subheader={subHeader}>
-          <div className="grid-wrapper card-container">
-            <div className="col-4">
-              <div className="project-card">
-                <span className="icon major fa-asterisk style2 fit"></span>
-                <h4>Product Development Team</h4>
-                <small>Wachsman</small>
-                <p>Wachsman is a leading professional services agency in the blockchain industry. We will develop NLP
-                  models for analyzing</p>
-              </div>
+                 subheader="Why join LionBase?">
+          <div className="card-container">
+            <div className="project-card">
+              <span className="icon major fa-terminal style7 fit"></span>
+              <h4>Product Development</h4>
+              <p>For students interested in product-based problems, such as design, back-end / front-end / full-stack
+                development, and software engineering.</p>
             </div>
-            <div className="col-4">
-              <div className="project-card">
-                <span className="icon major fa-asterisk style2 fit"></span>
-                <h3>Data Science Team</h3>
-                <small>Shapiro-Bernstein</small>
-                <p>Wachsman is a leading professional services agency in the blockchain industry. We will develop NLP
-                  models for analyzing</p>
-              </div>
+            <div className="project-card">
+              <span className="icon major fa-signal style7 fit"></span>
+              <h4>Data Science</h4>
+              <p>For students interested in mathematical and analytical problems such as statistical analysis, data
+                analysis, machine learning, and natural language processing.</p>
             </div>
-            <div className="col-4">
-              <div className="project-card">
-                <span className="icon major fa-asterisk style2 fit"></span>
-                <h3>Mentor Team</h3>
-                <small>Shapiro-Bernstein</small>
-                <p>Wachsman is a leading professional services agency in the blockchain industry. We will develop NLP
-                  models for analyzing</p>
-              </div>
+            <div className="project-card">
+              <span className="icon major fa-graduation-cap style7 fit"></span>
+              <h4>Mentorship</h4>
+              <p>For students with limited experience but an eagerness to learn applicable data science and product
+                development skills.</p>
+            </div>
+
+          </div>
+        </TextRow>
+        <div className="align-center">
+          <Link to="/apply" className="button style4">Student Application</Link>
+        </div>
+
+        <div id="client"></div>
+        <TextRow id="client" header="Companies"
+                 subheader="Why work with LionBase?">
+          <div className="card-container">
+            <div className="project-card">
+              <span className="icon major fa-pencil-ruler style7 fit"></span>
+              <h4>What Problems We Solve</h4>
+              <p>We help companies in New York City evaluate and address "medium-sized" problems through data science
+                and product development.
+              </p>
+              <p>Medium-sized problems describe challenges that may or may not require a full-time team or hire, but
+                large enough to add serious business value if solved.</p>
+            </div>
+            <div className="project-card">
+              <span className="icon major fa-chart-line style7 fit"></span>
+              <h4>Low-Risk, High Return</h4>
+              <p>Hiring full-time or working with high-priced consultants is a big investment.
+              </p>
+              <p>Save money without losing quality by working with teams of bright Columbia students who have access to
+                professors, university resources, and a diverse student body.</p>
+            </div>
+          </div>
+          <div className="card-container">
+            <div className="project-card big">
+              <span className="icon major fa-graduation-cap style7 fit"></span>
+              <h4>Where Company Payments Go</h4>
+              <p>Payments go towards project expenses (e.x. API costs) and towards student stipends -- with priority for
+                students on financial aid -- to reduce the opportunity cost of investing time in projects.
+              </p><p>
+              Asking for payments is our way of ensuring students are valued properly and that companies are invested
+              in working with LionBase.
+            </p><p>
+              Payments are negotiated on a client-by-client basis, depending on the scope of work.</p>
             </div>
           </div>
         </TextRow>
+        <div className="align-center">
+          <Link to="/apply" className="button style4">Client Application</Link>
+        </div>
       </Layout>
     )
   }
