@@ -28,7 +28,7 @@ class Contact extends Component {
         <Helmet title={siteTitle}/>
         <TextRow
           header="Email us at"
-          subheader="info@lionbase.nyc"
+          subheader="lionbase.nyc@gmail.com"
         />
 
       </Layout>

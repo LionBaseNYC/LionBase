@@ -26,7 +26,7 @@ class Footer extends React.Component {
               </a>
             </li>
             <li>
-              <a target="_blank" href="mailto:info@lionbase.nyc" className="footer-link">
+              <a target="_blank" href="mailto:lionbase.nyc@gmail.com" className="footer-link">
                 <FontAwesomeIcon icon={faEnvelopeSquare} className="icon footer-icon"/>
               </a>
             </li>
