@@ -14,10 +14,10 @@ import { Link } from 'gatsby'
 
 class Homepage extends React.Component {
   render() {
-    const siteTitle = 'LionBase @ CU'
+    const siteTitle = 'LionBase'
     const subTitle = 'Columbia student driven solutions for industry problems'
-    const header = 'Our Mission'
-    const subHeader = 'LionBase is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications.'
+    const header = 'Our mission is to learn and deliver.'
+    const subHeader = 'LionBase is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications. We work closely with companies to understand their problem and deliver data centric solutions.'
 
     return (
       <Layout
@@ -70,13 +70,13 @@ class Homepage extends React.Component {
         </section>
 
         <TextRow
-          header="Get Involved"
-          subheader="We are looking for students who like to solve problems, and companies that need to solve problems. Please
-              reach out if you fall under either category!"
+          header="Interested in working with us?"
+          subheader='We help companies in New York City evaluate and address "medium-sized" problems through data science
+          and product development. Click here to find out what it is like to work with us.'
           className="style7"
         >
           <div className="align-center">
-            <Link to="/apply" className="button style4">Apply</Link>
+            <Link to="/apply/#client" className="button style4">Work with us</Link>
           </div>
         </TextRow>
 

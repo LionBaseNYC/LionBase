@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 class Header extends React.Component {
 
   static defaultProps = {
-    title: 'LionBase @ CU',
+    title: 'LionBase',
     subtitle: 'Subtitle here',
     icon: null,
     navbar_children: null,
