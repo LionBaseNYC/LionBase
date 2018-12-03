@@ -35,8 +35,8 @@ class Apply extends Component {
             <div className="col-4">
               <FontAwesomeIcon icon={faUserCircle} className="icon style7 major naked"/>
               {/*<span className="icon style3 major fa-user-circle-o fit"></span>*/}
-              <h3>People First</h3>
-              <p>Build relationships together and place users at the center of our work</p>
+              <h3>Clients First</h3>
+              <p>Build relationships together and place our clients at the center of our work</p>
             </div>
             <div className="col-4">
               <FontAwesomeIcon icon={faHandshake} className="icon style2 major naked"/>
