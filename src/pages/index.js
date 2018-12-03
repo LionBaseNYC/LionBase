@@ -35,6 +35,7 @@ class Homepage extends React.Component {
           </div>
         }>
         <Helmet title={siteTitle}/>
+        <meta name="google-site-verification" content="LIUG6pjUZ6emRZ2deb107qM_bclQ7iqgihk1tLZ4MdM" />
 
         <TextRow header={header} subheader={subHeader}/>
 
