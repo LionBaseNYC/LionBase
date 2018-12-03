@@ -34,9 +34,9 @@ class Homepage extends React.Component {
             </ul>
           </div>
         }>
-        <Helmet title={siteTitle}/>
-        <meta name="google-site-verification" content="LIUG6pjUZ6emRZ2deb107qM_bclQ7iqgihk1tLZ4MdM" />
-
+        <Helmet title={siteTitle}>
+          <meta name="google-site-verification" content="LIUG6pjUZ6emRZ2deb107qM_bclQ7iqgihk1tLZ4MdM" />
+        </Helmet>
         <TextRow header={header} subheader={subHeader}/>
 
         <section id="two" className="main style2">
