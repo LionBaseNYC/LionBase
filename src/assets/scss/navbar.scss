@@ -1,4 +1,8 @@
 @import "libs/skel";
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import "libs/skel";
 
 @include skel-breakpoints((xlarge: '(max-width: 1680px)',
 large: '(max-width: 1280px)',
@@ -9,11 +13,19 @@ xxsmall: '(max-width: 360px)'
 ));
 
 #navbar {
+  font-family: _font(family-main);
+  font-size: 0.9em;
+  font-weight: 300;
   text-align: right;
   display: flex;
 
   .grow {
     flex: 1;
+  }
+
+  .title-item {
+    font-weight: 700 !important;
+    font-size: 1.1em !important;
   }
 
   .nav-item {

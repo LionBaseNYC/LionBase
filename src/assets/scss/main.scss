@@ -17,18 +17,16 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-@include skel-breakpoints((
-        xlarge: '(max-width: 1680px)',
-        large: '(max-width: 1280px)',
-        medium: '(max-width: 980px)',
-        small: '(max-width: 736px)',
-        xsmall: '(max-width: 480px)',
-        xxsmall: '(max-width: 360px)'
+@include skel-breakpoints((xlarge: '(max-width: 1680px)',
+large: '(max-width: 1280px)',
+medium: '(max-width: 980px)',
+small: '(max-width: 736px)',
+xsmall: '(max-width: 480px)',
+xxsmall: '(max-width: 360px)'
 ));
 
-@include skel-layout((
-        reset: 'full',
-        boxModel: 'border'
+@include skel-layout((reset: 'full',
+boxModel: 'border'
 ));
 
 /* Basic */
@@ -37,19 +35,25 @@ body {
   background: _palette(bg);
 
   .body.is-loading {
-    *, *:before, *:after {
+
+    *,
+    *:before,
+    *:after {
       @include vendor('animation', 'none !important');
       @include vendor('transition', 'none !important');
     }
   }
 
-  transition: all .25s linear; 
-  -o-transition: all .25s linear; 
-  -moz-transition: all .25s linear; 
-  -webkit-transition: all .25s linear; 
+  transition: all .25s linear;
+  -o-transition: all .25s linear;
+  -moz-transition: all .25s linear;
+  -webkit-transition: all .25s linear;
 }
 
-body, input, select, textarea {
+body,
+input,
+select,
+textarea {
   color: _palette(fg);
   font-family: _font(family-main);
   font-size: 16pt;
@@ -73,12 +77,14 @@ a {
   }
 }
 
-strong, b {
+strong,
+b {
   color: _palette(fg-bold);
   font-weight: _font(weight-bold);
 }
 
-em, i {
+em,
+i {
   font-style: italic;
 }
 
@@ -88,7 +94,12 @@ p {
   letter-spacing: 0.05em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: _palette(fg-bold);
   line-height: 1em;
   margin: 0 0 (_size(element-margin) * 0.5) 0;
@@ -199,7 +210,8 @@ pre {
 
 /* Section/Article */
 
-section, article {
+section,
+article {
   &.special {
     text-align: center;
   }
@@ -212,21 +224,21 @@ header {
     position: relative;
   }
 
-  h2 + p {
+  h2+p {
     font-size: 1.25em;
     line-height: 1.5em;
     margin-top: (_size(element-margin) * -0.5);
   }
 
-  h3 + p {
+  h3+p {
     font-size: 1.1em;
     line-height: 1.5em;
     margin-top: (_size(element-margin) * -0.4);
   }
 
-  h4 + p,
-  h5 + p,
-  h6 + p {
+  h4+p,
+  h5+p,
+  h6+p {
     font-size: 0.9em;
     line-height: 1.5em;
     margin-top: (_size(element-margin) * -0.3);
@@ -244,7 +256,11 @@ header {
       width: 6em;
     }
 
-    h2, h3, h4, h5, h6 {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       margin: 0;
     }
 
@@ -334,7 +350,8 @@ textarea {
 }
 
 input[type="checkbox"],
-input[type="radio"], {
+input[type="radio"],
+  {
   @include vendor('appearance', 'none');
   display: block;
   float: left;
@@ -343,7 +360,7 @@ input[type="radio"], {
   width: 1em;
   z-index: -1;
 
-  & + label {
+  &+label {
     @include icon;
     color: _palette(fg);
     cursor: pointer;
@@ -370,7 +387,7 @@ input[type="radio"], {
     }
   }
 
-  &:checked + label {
+  &:checked+label {
     &:before {
       background: _palette(dark, bg);
       border-color: _palette(dark, bg);
@@ -379,7 +396,7 @@ input[type="radio"], {
     }
   }
 
-  &:focus + label {
+  &:focus+label {
     &:before {
       border-color: _palette(accent3);
     }
@@ -387,7 +404,7 @@ input[type="radio"], {
 }
 
 input[type="checkbox"] {
-  & + label {
+  &+label {
     &:before {
       border-radius: _size(border-radius);
     }
@@ -395,7 +412,7 @@ input[type="checkbox"] {
 }
 
 input[type="radio"] {
-  & + label {
+  &+label {
     &:before {
       border-radius: 100%;
     }
@@ -436,8 +453,8 @@ input[type="radio"] {
   padding: 1.5em;
 
   > :last-child,
-  > :last-child > :last-child,
-  > :last-child > :last-child > :last-child {
+  > :last-child> :last-child,
+  > :last-child> :last-child> :last-child {
     margin-bottom: 0;
   }
 
@@ -455,32 +472,39 @@ input[type="radio"] {
     background: _palette(accent1);
 
   }
+
   &.style2 {
 
     background: _palette(accent2);
 
   }
+
   &.style3 {
 
     background: _palette(accent3);
 
   }
+
   &.style4 {
     background: _palette(accent4);
     color: white !important;
+
     &:hover {
       background: _palette(accent3);
     }
   }
+
   &.style5 {
 
     background: _palette(accent5);
   }
+
   &.style6 {
 
     background: _palette(accent6);
 
   }
+
   &.style7 {
     background: #FF6666;
   }
@@ -499,12 +523,13 @@ input[type="radio"] {
   border-bottom: none;
   position: relative;
 
-  > path {
+  >path {
     transform-origin: center;
     transform: scale(0.45);
   }
+
   &.footer-icon {
-    > path {
+    >path {
       transform-origin: center;
       transform: scale(1.2);
     }
@@ -513,68 +538,79 @@ input[type="radio"] {
   &.naked {
     margin-top: 2em !important;
     margin-bottom: 3em !important;
-    > path {
+
+    >path {
       transform-origin: center;
       transform: scale(4);
     }
   }
 
-  > .label {
+  >.label {
     display: none;
   }
 
   &.style1 {
-    > path {
+    >path {
       fill: _palette(accent1);
     }
   }
+
   &.style2 {
-    > path {
+    >path {
       fill: _palette(accent2);
     }
   }
+
   &.style3 {
-    > path {
+    >path {
       fill: _palette(accent3);
     }
   }
+
   &.style4 {
-    > path {
+    >path {
       fill: _palette(accent4);
     }
   }
+
   &.style5 {
-    > path {
+    >path {
       fill: _palette(accent5);
     }
   }
+
   &.style6 {
-    > path {
+    >path {
       fill: _palette(accent6);
     }
   }
+
   &.style7 {
-    > path {
+    >path {
       fill: #FF6666;
     }
   }
+
   &.style8 {
-    > path {
+    >path {
       fill: #22a6b3;
     }
   }
+
   &.style9 {
-    > path {
+    >path {
       fill: #686de0;
     }
   }
+
   &.style10 {
-    > path {
+    >path {
       fill: #f9ca24;
     }
   }
+
   &.style11 {
-    > path {
+    >path {
       fill: _palette(bg);
     }
   }
@@ -676,11 +712,13 @@ input[type="radio"] {
       margin: 0 0 0.4em 0;
       font-size: 0.8em;
     }
+
     small {
       color: _palette(border2);
       line-height: 2.5em;
       font-size: 1em;
     }
+
     p {
       font-size: 0.8em;
       line-height: 1.6em;
@@ -748,7 +786,7 @@ ul {
 
   &.card-container {
     .grid-card {
-      max-width: 300px;
+      width: 300px;
       //height: 200px;
     }
   }
@@ -782,6 +820,7 @@ ul {
           line-height: inherit;
         }
       }
+
       h3 {
         margin: 1em 0 0.5em 0;
       }
@@ -819,7 +858,7 @@ ul {
           padding-top: 0;
         }
 
-        > * {
+        >* {
           margin-bottom: 0;
         }
       }
@@ -837,7 +876,7 @@ ul {
 
     &.uniform {
       li {
-        > * {
+        >* {
           min-width: 12em;
         }
       }
@@ -854,7 +893,7 @@ ul {
         display: table-cell;
         padding: 0 0 0 (_size(element-margin) * 0.5);
 
-        > * {
+        >* {
           margin-bottom: 0;
         }
       }
@@ -1043,7 +1082,14 @@ button,
     }
   }
 
-  h1, h2, h3, h4, h5, h6, strong, b {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
     color: _palette(dark, fg-bold);
   }
 
@@ -1116,11 +1162,14 @@ button,
   &.style1 {
     background: _palette(bg);
     text-align: center;
+
     .page-section-wrapper {
       margin-bottom: 1em;
+
       .page-section {
         max-width: 900px;
         margin: 0 auto;
+
         p {
           margin: 1.5em auto 4em 0;
         }
@@ -1145,30 +1194,50 @@ button,
   &.style3 {
     background: _palette(fg-light);
     text-align: center;
+
     .page-section {
       max-width: 900px;
       margin: 0 auto;
     }
   }
+
   &.style4 {
     background: _palette(fg-light);
     text-align: center;
+
     .page-section {
       max-width: 900px;
       margin: 0 auto;
-    }
-    h1 {
-      color: _palette(accent4);
-      font-size: 3em;
     }
   }
 
   &.style7 {
     background: _palette(fg-lighter);
     text-align: center;
+
     .page-section {
       max-width: 900px;
       margin: 0 auto;
+    }
+
+    &.statistics {
+      h1 {
+        color: _palette(accent4-light-alt)
+      }
+    }
+  }
+
+  &.statistics {
+    h1 {
+      color: _palette(accent4);
+      font-size: 4em;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-size: 1.2em;
+      padding: 0 1.5em;
     }
   }
 
@@ -1260,9 +1329,8 @@ button,
 }
 
 .body.is-loading {
-  #header-container {
+  #header-container {}
 
-  }
   #header {
     .inner {
       @include vendor('transform', 'scale(1.05)');
@@ -1273,6 +1341,7 @@ button,
         opacity: 0;
       }
     }
+
     &:after {
       opacity: 1;
     }
@@ -1342,7 +1411,10 @@ button,
 
   /* Basic */
 
-  body, input, select, textarea {
+  body,
+  input,
+  select,
+  textarea {
     font-size: 14pt;
   }
 
@@ -1360,11 +1432,19 @@ button,
 
   /* Basic */
 
-  body, input, select, textarea {
+  body,
+  input,
+  select,
+  textarea {
     font-size: 13pt;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     br {
       display: none;
     }
@@ -1440,6 +1520,17 @@ button,
 
   .main {
     @include padding(5em, 3em);
+
+    &.statistics {
+      h1 {
+        font-size: 3.5em !important;
+      }
+
+      p {
+        font-size: 1em;
+        padding: 0 1em;
+      }
+    }
   }
 
   /* Header */
@@ -1464,6 +1555,7 @@ button,
 
   #two {
     text-align: center;
+
     .card-container {
       flex-wrap: wrap;
       /* text-align: center; */
@@ -1475,6 +1567,7 @@ button,
     .project-card {
       //height: 100%;
       margin: 1em 1em;
+
       &.big {
         width: 350px !important;
       }
@@ -1488,7 +1581,10 @@ button,
 
   /* Basic */
 
-  body, input, select, textarea {
+  body,
+  input,
+  select,
+  textarea {
     font-size: 12pt;
   }
 
@@ -1570,9 +1666,7 @@ button,
   }
 
   .card-container {
-    .project-card {
-
-    }
+    .project-card {}
   }
 
 }
@@ -1597,7 +1691,7 @@ button,
           padding-top: 0;
         }
 
-        > * {
+        >* {
           margin: 0 !important;
           width: 100%;
 
@@ -1675,8 +1769,7 @@ button,
   }
 
   .card-container {
-    .project-card {
-    }
+    .project-card {}
   }
 
 }
@@ -1687,7 +1780,8 @@ button,
 
   /* Basic */
 
-  html, body {
+  html,
+  body {
     min-width: 320px;
   }
 

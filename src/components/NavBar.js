@@ -52,7 +52,7 @@ class NavBar extends Component {
         </div>
 
         <div id="navbar">
-          <div className="nav-item">
+          <div className="nav-item title-item">
             <Link to="/">LionBase</Link>
           </div>
           <div className="grow"></div>

@@ -28,31 +28,9 @@ class Projects extends Component {
       >
         <Helmet title={siteTitle}/>
 
-        <TextRow header="Current Projects"
-                 subheader='We work on projects every semester and we are always looking for new clients to work with.'>
-          <div className="card-container">
-            <div className="project-card">
-              <FontAwesomeIcon icon={faAsterisk} className="icon style8 major naked"/>
-              <h3>Mentored Project</h3>
-              <small>Mentored Project</small>
-              <h4>Project Description</h4>
-              <p>
-                Select a set of NY residents and create an interactive way for them to explore health data.
-              </p>
-              <h4>Data Science</h4>
-              <p>
-                We will apply fundamental data science techniques and exploration methods to understand publicly
-                available NY health data.
-              </p>
-              <h4>Product Development</h4>
-              <p>
-                An accompanying application with visualizations will be built for selected set of users, with
-                deployment in NY.
-
-                Users defined by mentored teams.
-              </p>
-            </div>    
-          </div>
+        <TextRow header="Our students have worked at..."
+                 subheader=''>
+ */}
         </TextRow>
 
         <TextRow header="Past Projects"
@@ -103,6 +81,50 @@ class Projects extends Component {
                 sources who report income to Shapiro Bernstein.
               </p>
             </div>
+            <div className="project-card">
+              <FontAwesomeIcon icon={faAsterisk} className="icon style8 major naked"/>
+              <h3>Mentored Project</h3>
+              {/* <small>Mentored Project</small> */}
+              <h4>Project Description</h4>
+              <p>
+                Select a set of NY residents and create an interactive way for them to explore health data.
+              </p>
+              <h4>Data Science</h4>
+              <p>
+                We will apply fundamental data science techniques and exploration methods to understand publicly
+                available NY health data.
+              </p>
+              <h4>Product Development</h4>
+              <p>
+                An accompanying application with visualizations will be built for selected set of users, with
+                deployment in NY.
+
+                Users defined by mentored teams.
+              </p>
+            </div>  
+          </div>
+          {/* <div className="card-container">
+            <div className="project-card">
+              <FontAwesomeIcon icon={faAsterisk} className="icon style8 major naked"/>
+              <h3>Mentored Project</h3>
+              <small>Mentored Project</small>
+              <h4>Project Description</h4>
+              <p>
+                Select a set of NY residents and create an interactive way for them to explore health data.
+              </p>
+              <h4>Data Science</h4>
+              <p>
+                We will apply fundamental data science techniques and exploration methods to understand publicly
+                available NY health data.
+              </p>
+              <h4>Product Development</h4>
+              <p>
+                An accompanying application with visualizations will be built for selected set of users, with
+                deployment in NY.
+
+                Users defined by mentored teams.
+              </p>
+            </div>    
           </div>
           {/* <div className="card-container">
             <div className="project-card">

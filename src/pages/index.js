@@ -14,7 +14,7 @@ import { Link } from 'gatsby'
 
 class Homepage extends React.Component {
   render() {
-    const siteTitle = 'LionBase'
+    const siteTitle = 'LIONBASE'
     const subTitle = 'Columbia student driven solutions for industry problems'
     const header = 'Our mission is to learn and deliver.'
     const subHeader = 'LionBase is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications. We work closely with companies to understand their problem and deliver data centric solutions.'
@@ -70,7 +70,7 @@ class Homepage extends React.Component {
           </div>
         </section>
 
-        <section id="two" className="main style4">
+        <section id="two" className="main style4 statistics">
           <ul className="major-icons card-container">
             <li>
               <div className="grid-card">
@@ -80,25 +80,52 @@ class Homepage extends React.Component {
             </li>
             <li>
               <div className="grid-card">
-                <h1>31%</h1>
+                <h1>34%</h1>
                 <p>Female</p>
               </div>
             </li>
             <li>
               <div className="grid-card">
-                <h1>47%</h1>
+                <h1>48%</h1>
                 <p>Receiving Financial Aid</p>
               </div>
             </li>
             <li>
               <div className="grid-card">
-                <h1>27%</h1>
+                <h1>28%</h1>
                 <p>First-Generation Students</p>
               </div>
             </li>
           </ul>
-          <div className="grid-wrapper">
-          </div>
+        </section>
+
+        <section id="two" className="main style7 statistics">
+        <ul className="major-icons card-container">
+            <li>
+              <div className="grid-card">
+                <h1>44%</h1>
+                <p>Computer Science</p>
+                </div>
+            </li>
+            <li>
+              <div className="grid-card">
+                <h1>16%</h1>
+                <p>Operations Research</p>
+              </div>
+            </li>
+            <li>
+              <div className="grid-card">
+                <h1>22%</h1>
+                <p>Applied Math or Statistics</p>
+              </div>
+            </li>
+            <li>
+              <div className="grid-card">
+                <h1>18%</h1>
+                <p>Other</p>
+              </div>
+            </li>
+          </ul>
         </section>
 
         <TextRow
