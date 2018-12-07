@@ -24,16 +24,17 @@ class Homepage extends React.Component {
         title={siteTitle}
         subtitle={subTitle}
         icon={(<img className="home-icon" src={LionIcon} />)}
-        navbar_children={
-          <div className="actions-box">
-            <ul className="actions">
-              <li><Link to="/about" className="button scrolly">Learn more</Link></li>
-            </ul>
-            <ul className="actions">
-              <li><Link to="/apply" className="button scrolly">Apply now</Link></li>
-            </ul>
-          </div>
-        }>
+        // navbar_children={
+        //   <div className="actions-box">
+        //     <ul className="actions">
+        //       <li><Link to="/about" className="button scrolly">Learn more</Link></li>
+        //     </ul>
+        //     <ul className="actions">
+        //       <li><Link to="/apply" className="button scrolly">Apply now</Link></li>
+        //     </ul>
+        //   </div>
+        // }
+        >
         <Helmet title={siteTitle}>
           <meta name="google-site-verification" content="LIUG6pjUZ6emRZ2deb107qM_bclQ7iqgihk1tLZ4MdM" />
         </Helmet>

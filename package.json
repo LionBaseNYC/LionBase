@@ -15,6 +15,7 @@
     "gatsby-plugin-sass": "^2.0.1",
     "node-sass": "^4.9.3",
     "react": "^16.5.1",
+    "react-burger-menu": "^2.5.4",
     "react-compose": "^2.0.0",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0"
