@@ -14,7 +14,7 @@ import { Link } from 'gatsby'
 
 class Homepage extends React.Component {
   render() {
-    const siteTitle = 'LIONBASE'
+    const siteTitle = 'LionBase'
     const subTitle = 'Columbia student driven solutions for industry problems'
     const header = 'Our mission is to learn and deliver.'
     const subHeader = 'LionBase is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications. We work closely with companies to understand their problem and deliver data centric solutions.'

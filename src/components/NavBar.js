@@ -33,16 +33,21 @@ class NavBar extends Component {
           <div className="grow"></div>
           <Menu 
             right
-            id="burger-sidemenu" 
             customBurgerIcon={<FontAwesomeIcon icon={faBars} />}
             customCrossIcon={<FontAwesomeIcon icon={faTimes}/>}
             disableCloseOnEsc
             noOverlay
           >
-            <a id="home" className="menu-item" href="/">Home</a>
-            <a id="about" className="menu-item" href="/about">About</a>
-            <a id="contact" className="menu-item" href="/contact">Contact</a>
-            {/* <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a> */}
+            <Link id="home" className="menu-item" to="/">Home</Link>
+            <div className="divider"/>
+            <Link id="about" className="menu-item" to="/about">About</Link>
+            <div className="divider"/>
+            <Link id="projects" className="menu-item" to="/projects">Projects</Link>
+            <div className="divider"/>
+            <Link id="contact" className="menu-item" to="/contact">Contact Us</Link>
+            <div className="divider"/>
+            <Link id="apply" className="menu-item" to="/apply">Apply</Link>
+            <div className="divider"/>
           </Menu>
         </div>
 
