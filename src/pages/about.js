@@ -207,6 +207,13 @@ class Apply extends Component {
           </div>
 
           <div className="col-3">
+            <BioCard  name={'Gabriel Benedict'} title = {'Statistics Consultant'} major={'Statistics'} 
+                      portfolio_url={'https://gabriben.github.io/'}
+                      image_src ={GabrielBenedict}/>
+                      
+          </div>
+
+          <div className="col-3">
             <BioCard  name={'Huijuan Zhang'} title = {'Client Team'} major={'Biostatistics'} 
                       linkedin_url={'https://www.linkedin.com/in/huijuanzhang/'}
                       image_src ={HuijuanZhang}/>
@@ -372,6 +379,83 @@ class Apply extends Component {
                       image_src ={SharonJin}/>
                       
           </div>
+
+          <div className="col-3">
+            <BioCard  name={'Sohbet Dovranov'} title = {'Research Team'} major={'Economics & Computer Science'} 
+                      linkedin_url={'https://www.linkedin.com/in/sohbet-dovranov-a6a999110'}
+                      image_src ={SohbetDovranov}/>
+                      
+          </div>
+
+          <div className="col-3">
+            <BioCard  name={'Miriam Linz'} title = {'Research Team'} major={'Philosophy & Computer Science'} 
+                      linkedin_url={'https://www.linkedin.com/in/miriam-linz-b86a14173/'}
+                      image_src ={MiriamLinz}/>
+                      
+          </div>
+
+          <div className="col-3">
+            <BioCard  name={'Haley So'} title = {'Research Team'} major={'Electrical Engineering'} 
+                      linkedin_url={'https://www.linkedin.com/in/haleyso/'}
+                      image_src ={HaleySo}/>
+                      
+          </div>
+
+          <div className="col-3">
+            <BioCard  name={'Tejit Pabari'} title = {'Research Team'} major={'Computer Science'} 
+                      linkedin_url={'https://www.linkedin.com/in/tejitpabari/'}
+                      image_src ={TejitPabari}/>
+                      
+          </div>
+
+          <div className="col-3">
+            <BioCard  name={'Brandon Zhang'} title = {'Research Team'} major={'Applied Math'} 
+                      linkedin_url={'https://www.linkedin.com/in/brandon-zhang-5aa859149/'}
+                      image_src ={BrandonWilliamZhang}/>
+                      
+          </div>
+
+          <div className="col-3">
+            <BioCard  name={'Ian Loeb'} title = {'Research Team'} major={'Computer Science'} 
+                      linkedin_url={'https://www.linkedin.com/in/ian-loeb/'}
+                      image_src ={IbrahimNawazKhan}/>
+                      
+          </div>
+
+          <div className="col-3">
+            <BioCard  name={'Nitasha Nair'} title = {'Research Team'} major={'Environmental Policy'} 
+                      linkedin_url={'https://www.linkedin.com/in/nitasha-nair-198974a/'}
+                      image_src ={NitashaNair}/>
+                      
+          </div>
+
+          <div className="col-3">
+            <BioCard  name={'Brennan McManus'} title = {'Research Team'} major={'Linguistics & Computer Science'} 
+                      linkedin_url={'linkedin.com/in/brennan-mcmanus'}
+                      image_src ={BrennanXavierMcManus}/>
+                      
+          </div>
+
+          <div className="col-3">
+            <BioCard  name={'Aileen Cano'} title = {'Research Team'} major={'Computer Science'} 
+                      image_src ={AileenCano}/>
+                      
+          </div>
+
+          <div className="col-3">
+            <BioCard  name={'Ki Cooley-Winters'} title = {'Research Team'} major={'Statistics'} 
+                      linkedin_url={'https://www.linkedin.com/in/ki-cooley-winters-a4b45a169/'}
+                      image_src ={KiCooleyWinters}/>
+                      
+          </div>
+
+          <div className="col-3">
+            <BioCard  name={'Zachary Geddes'} title = {'Research Team'} major={'Computer Science'} 
+                      linkedin_url={'https://www.linkedin.com/in/zgeddes/'}
+                      image_src ={ZacharyGeddes}/>
+                      
+          </div>
+
 
         </div>
         </TextRow>
