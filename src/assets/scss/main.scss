@@ -1217,7 +1217,7 @@ button,
     position: relative;
 
     &:after {
-      background: _palette(dark, border);
+      // background: _palette(dark, border);
       content: '';
       height: 100vh;
       //left: 50%;
@@ -1293,7 +1293,7 @@ button,
   text-align: center;
   justify-content: center;
   border-top: 2px solid _palette(fg-light);
-  margin-top: 5em;
+  margin-top: 13em;
   display: flex;
   flex-direction: row;
   align-items: center;
