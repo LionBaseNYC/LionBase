@@ -6,7 +6,8 @@
 //@import url('../css/font-awesome.min.css');
 //@import "../scss/fontawesome.scss";
 //@import "../scss/solid.scss";
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600,600i');
+// @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i');
 @import "css-grid";
 
@@ -565,6 +566,11 @@ input[type="radio"] {
       fill: #f9ca24;
     }
   }
+  &.style11 {
+    > path {
+      fill: _palette(bg);
+    }
+  }
 
   &.major {
     @include icon;
@@ -754,14 +760,14 @@ ul {
       .icon {
         //@include vendor('transform', 'rotate(45deg)');
         //border-radius: _size(border-radius);
-        border-radius: 100%;
-        border: solid 1px _palette(border);
+        // border-radius: 100%;
+        border: solid 5px _palette(border);
         display: inline-block;
-        height: 8em;
-        line-height: 8em;
+        height: 6em;
+        line-height: 6em;
         margin: 0;
         text-align: center;
-        width: 8em;
+        width: 6em;
 
         &:before {
           //@include vendor('transform', 'rotate(-45deg)');
@@ -1121,10 +1127,11 @@ button,
     //background-attachment: fixed, fixed;
     ////background-image: url('../images/overlay1.png'), url('../images/header.jpg');
     //background-size: auto, cover;
-    background-attachment: fixed, fixed, fixed;
-    background-image: url('../images/overlay2.png'), radial-gradient(circle at 20%, _palette(accent5-alt) 20%, _palette(secondary1-alt) 200%, _palette(accent5-alt));
-    background-position: top left, center center, center center;
-    background-size: auto, cover, cover;
+    // background-attachment: fixed, fixed, fixed;
+    // background-image: url('../images/overlay2.png'), radial-gradient(circle at 20%, _palette(accent5-alt) 20%, _palette(secondary1-alt) 200%, _palette(accent5-alt));
+    // background-position: top left, center center, center center;
+    // background-size: auto, cover, cover;
+    background-color: _palette(accent4-light-alt);
     text-align: center;
   }
 
@@ -1134,6 +1141,18 @@ button,
     .page-section {
       max-width: 900px;
       margin: 0 auto;
+    }
+  }
+  &.style4 {
+    background: _palette(fg-light);
+    text-align: center;
+    .page-section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: _palette(accent4);
+      font-size: 3em;
     }
   }
 
@@ -1156,10 +1175,11 @@ button,
 
 #header-container {
   @include dark(#4686a0);
-  background-attachment: fixed, fixed, fixed;
-  background-image: url('../images/overlay2.png'), url('../images/overlay3.svg'), linear-gradient(45deg, _palette(accent1-alt) 5%, _palette(accent3-alt) 40%, _palette(accent4-alt));
-  background-position: top left, center center, center center;
-  background-size: auto, cover, cover;
+  background-color: _palette(accent4);
+  // background-attachment: fixed, fixed, fixed;
+  // background-image: url('../images/overlay2.png'), url('../images/overlay3.svg'), linear-gradient(45deg, _palette(accent1-alt) 5%, _palette(accent3-alt) 40%, _palette(accent4-alt));
+  // background-position: top left, center center, center center;
+  // background-size: auto, cover, cover;
 
 }
 
@@ -1171,6 +1191,8 @@ button,
 
   h1 {
     margin: 0;
+    font-weight: 500;
+    letter-spacing: 0.3em;
   }
 
   p {

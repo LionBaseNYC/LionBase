@@ -14,7 +14,7 @@ import { Link } from 'gatsby'
 
 class Homepage extends React.Component {
   render() {
-    const siteTitle = 'LionBase'
+    const siteTitle = 'LIONBASE'
     const subTitle = 'Columbia student driven solutions for industry problems'
     const header = 'Our mission is to learn and deliver.'
     const subHeader = 'LionBase is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications. We work closely with companies to understand their problem and deliver data centric solutions.'
@@ -43,16 +43,15 @@ class Homepage extends React.Component {
           <ul className="major-icons card-container">
             <li>
               <div className="grid-card">
-                <FontAwesomeIcon icon={faCode} className="icon style1 major"/>
+                <FontAwesomeIcon icon={faCode} className="icon style11 major"/>
                 {/*<span className="icon style1 major fa-code"></span>*/}
-                <h3>Who we are</h3>
+                <h3>Who We Are</h3>
                 <p>We are a group of Columbia students passionate about working on real-world data problems. </p>
               </div>
             </li>
-
             <li>
               <div className="grid-card">
-                <FontAwesomeIcon icon={faBolt} className="icon style2 major"/>
+                <FontAwesomeIcon icon={faBolt} className="icon style11 major"/>
                 <h3>What We Do</h3>
                 <p>We focus on exploring data projects related to Data Analytics, Machine Learning, NLP, Statistical
                   Analysis, and more.</p>
@@ -60,9 +59,40 @@ class Homepage extends React.Component {
             </li>
             <li>
               <div className="grid-card">
-                <FontAwesomeIcon icon={faCalendar} className="icon style1 major"/>
+                <FontAwesomeIcon icon={faCalendar} className="icon style11 major"/>
                 <h3>How We Work</h3>
                 <p>Students learn through exploratory projects for companies while building genuine relationships.</p>
+              </div>
+            </li>
+          </ul>
+          <div className="grid-wrapper">
+          </div>
+        </section>
+
+        <section id="two" className="main style4">
+          <ul className="major-icons card-container">
+            <li>
+              <div className="grid-card">
+                <h1>18%</h1>
+                <p>Underrepresented Minority</p>
+                </div>
+            </li>
+            <li>
+              <div className="grid-card">
+                <h1>31%</h1>
+                <p>Female</p>
+              </div>
+            </li>
+            <li>
+              <div className="grid-card">
+                <h1>47%</h1>
+                <p>Receiving Financial Aid</p>
+              </div>
+            </li>
+            <li>
+              <div className="grid-card">
+                <h1>27%</h1>
+                <p>First-Generation Students</p>
               </div>
             </li>
           </ul>

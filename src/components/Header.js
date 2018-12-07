@@ -21,7 +21,7 @@ class Header extends React.Component {
         <section id="header">
           <div className="inner">
             {icon}
-            <h1><strong>{title}</strong></h1>
+            <h1 className="header-title">{title}</h1>
             <p>{subtitle}</p>
             {navbar_children}
           </div>
