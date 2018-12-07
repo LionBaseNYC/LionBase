@@ -9,6 +9,7 @@ import { Link } from 'gatsby'
 import TextRow from '../components/TextRow'
 import { faUserCircle, faHandshake, faChartLine, faPaintBrush, faPeopleCarry, faShapes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import BioCard from "../components/BioCard"
 
 
 
@@ -29,6 +30,9 @@ class Apply extends Component {
         subtitle={subTitle}
       >
         <Helmet title={siteTitle}/>
+
+        {/* KEV TODO */}
+        {/* <BioCard name={} title={} major={} portfolio_url={}/> */}
 
         <TextRow header={header} subheader={subHeader}>
           <div className="grid-wrapper">
@@ -71,7 +75,6 @@ class Apply extends Component {
           </div>
 
         </TextRow>
-
       </Layout>
     )
   }
