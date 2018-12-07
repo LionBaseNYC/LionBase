@@ -6,7 +6,7 @@
 //@import url('../css/font-awesome.min.css');
 //@import "../scss/fontawesome.scss";
 //@import "../scss/solid.scss";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600,600i');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i');
 // @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i');
 @import "css-grid";
@@ -32,6 +32,8 @@
 ));
 
 /* Basic */
+
+* {-webkit-font-smoothing: antialiased;}
 
 body {
   background: _palette(bg);
@@ -1191,7 +1193,7 @@ button,
 
   h1 {
     margin: 0;
-    font-weight: 500;
+    font-weight: _font(weight_bold);
     letter-spacing: 0.3em;
   }
 
@@ -1237,19 +1239,19 @@ button,
     }
   }
 
-  &:after {
-    @include vendor('transition', 'opacity 1s ease');
-    background-image: linear-gradient(45deg, _palette(accent3-alt), _palette(accent6-alt));
-    content: '';
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+  // &:after {
+  //   @include vendor('transition', 'opacity 1s ease');
+  //   background-image: linear-gradient(45deg, _palette(accent3-alt), _palette(accent6-alt));
+  //   content: '';
+  //   height: 100%;
+  //   left: 0;
+  //   opacity: 0;
+  //   position: absolute;
+  //   top: 0;
+  //   width: 100%;
 
-    //z-index: -1;
-  }
+  //   //z-index: -1;
+  // }
 
 }
 
