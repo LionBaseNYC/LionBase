@@ -7,8 +7,10 @@ import Layout from '../components/layout'
 
 import { Link } from 'gatsby'
 import TextRow from '../components/TextRow'
-import { faUserCircle, faHandshake, faChartLine, faPaintBrush, faPeopleCarry, faShapes } from '@fortawesome/free-solid-svg-icons'
+import BioTextRow from '../components/TextRow'
+import { faUserCircle, faHandshake, faChartLine, faPaintBrush, faPeopleCarry, faShapes, faUsers, faMicroscope, faBriefcase } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import "../assets/scss/biocard.scss"
 
 import AileenCano from '../assets/images/member-photos/AileenCano.jpeg'
 import AlexKim from '../assets/images/member-photos/AlexKim.png'
@@ -77,8 +79,16 @@ class Apply extends Component {
     const subTitle = 'Learn more about who we are and what we do'
     const header = 'Our Core Values'
     const subHeader = 'LionBase is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications.'
-    const teamHeader = 'Our Team'
-    const subTeamHeader = 'Meet the people behind LionBase'
+    const structHeader = 'Our Team Structure'
+    const subStructHeader = 'We have three primary groups: client teams, research teams, and the executive team'
+    const execHeader = 'Executive Team'
+    const subExecHeader = 'Meet the organizers of LionBase'
+    const leadHeader = 'Team Leads'
+    const subLeadHeader = 'Meet the client-facing project leads'
+    const teamHeader = 'Client Team Members'
+    const subTeamHeader = 'Meet the people who build our products alongside the team leads'
+    const researchHeader = 'Research Team Members'
+    const subResearchHeader = 'Meet the people expanding our understanding of data science'
     return (
       <Layout
         title={siteTitle}
@@ -114,42 +124,77 @@ class Apply extends Component {
 
         </TextRow>
 
-        <TextRow header={teamHeader} subheader = {subTeamHeader}>
+        <TextRow header={structHeader} subheader={subStructHeader}>
         <div className="grid-wrapper">
-          <div className="col-3">
+            <div className="col-4">
+              <FontAwesomeIcon icon={faUsers} className="icon style7 major naked"/>
+              {/*<span className="icon style3 major fa-user-circle-o fit"></span>*/}
+              <h3>Client Teams</h3>
+              <p>Each client team consists of 6-8 students with significant experience in data science or product development.
+              </p>
+            </div>
+            <div className="col-4">
+              <FontAwesomeIcon icon={faMicroscope} className="icon style8 major naked"/>
+              {/*<span className="icon style3 major fa-line-chart fit"></span>*/}
+              <h3>Research Teams</h3>
+              <p>Our research teams perform regular exploration of various data science fields to improve our work internally.</p>
+            </div>
+            <div className="col-4">
+              <FontAwesomeIcon icon={faBriefcase} className="icon style9 major naked"/>
+              {/*<span className="icon style3 major fa-line-chart fit"></span>*/}
+              <h3>Executive Team</h3>
+              <p>The executive team supports the client and research teams through business and operations.</p>
+            </div>
+          </div>
+
+        </TextRow>
+
+      <BioTextRow header={execHeader} subheader={subExecHeader}>
+         
+           <div className = "grid-wrapper">
+           <div className = "col-4">
             <BioCard  name={'Kevin Le'} title = {'Executive'} major={'Operations Research'} 
                       linkedin_url={'https://www.linkedin.com/in/kevin-le1/'} image_src ={KevinLe}/>
 
-          </div>
+            </div>
 
-          <div className="col-3">
+            <div className = "col-4">
             <BioCard  name={'Tommy Polanco'} title = {'Executive'} major={'Applied Math'} 
                       linkedin_url={'https://www.linkedin.com/in/tommy-polanco/'}
                       image_src ={TommyPolanco}/>
+            </div>
+            
                       
-          </div>
-
-          <div className="col-3">
+          
+            <div className = "col-4">
             <BioCard  name={'Morgan Kang'} title = {'Executive'} major={'History & Business'} 
                       linkedin_url={'https://www.linkedin.com/in/morgankang/'}
                       image_src ={MorganKang}/>
+            </div>
+            
                       
-          </div>
-
-          <div className="col-3">
+        
+            <div className = "col-4">
             <BioCard  name={'Andrew Rodriguez'} title = {'Executive'} major={'Biology & Business'} 
                       linkedin_url={'https://www.linkedin.com/in/andrew-rodriguez-001981149/'}
                       image_src ={AndrewRodriguez}/>
+            </div>
+          
                       
-          </div>
-
-          <div className="col-3">
+            <div className = "col-4">
             <BioCard  name={'Alex Kim'} title = {'Executive'} major={'Biomedical Engineering & Computer Science'} 
                       linkedin_url={'https://www.linkedin.com/in/alex-g-kim/'}
                       image_src ={AlexKim}/>
+            </div>
                       
-          </div>
+         
+      </div>
 
+    </BioTextRow>
+
+
+      <BioTextRow header = {leadHeader} subheader ={subLeadHeader}>
+        <div className = "grid-wrapper">
           <div className="col-3">
             <BioCard  name={'Katrina Francis'} title = {'Team Lead'} major={'Operations Research'} 
                       portfolio_url={'http://www.columbia.edu/~klf2133/'}
@@ -213,6 +258,12 @@ class Apply extends Component {
                       
           </div>
 
+          </div>
+  
+      </BioTextRow>
+
+      <BioTextRow header={teamHeader} subheader={subTeamHeader}>
+      <div className = "grid-wrapper">
           <div className="col-3">
             <BioCard  name={'Huijuan Zhang'} title = {'Client Team'} major={'Biostatistics'} 
                       linkedin_url={'https://www.linkedin.com/in/huijuanzhang/'}
@@ -379,6 +430,12 @@ class Apply extends Component {
                       image_src ={SharonJin}/>
                       
           </div>
+          </div>
+        </BioTextRow>
+
+        <BioTextRow header={researchHeader} subheader={subResearchHeader}>
+
+        <div className = "grid-wrapper">
 
           <div className="col-3">
             <BioCard  name={'Sohbet Dovranov'} title = {'Research Team'} major={'Economics & Computer Science'} 
@@ -416,9 +473,16 @@ class Apply extends Component {
           </div>
 
           <div className="col-3">
+            <BioCard  name={'Ibrahim Nawaz Khan'} title = {'Research Team'} major={'Economics'} 
+                      linkedin_url={'https://www.linkedin.com/in/ibrahim-khan/'}
+                      image_src ={IbrahimNawazKhan}/>
+                      
+          </div>
+
+          <div className="col-3">
             <BioCard  name={'Ian Loeb'} title = {'Research Team'} major={'Computer Science'} 
                       linkedin_url={'https://www.linkedin.com/in/ian-loeb/'}
-                      image_src ={IbrahimNawazKhan}/>
+                      image_src ={IanLoeb}/>
                       
           </div>
 
@@ -458,7 +522,7 @@ class Apply extends Component {
 
 
         </div>
-        </TextRow>
+        </BioTextRow>
 
       </Layout>
     )

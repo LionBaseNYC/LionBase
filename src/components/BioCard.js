@@ -29,7 +29,9 @@ class BioCard extends React.Component {
       <div className="bio_card">
         <img className ='object_fit_full' src = {image_src}/>
         <p>
-        {name}, {title}
+        <b>{name}</b>
+        <br/>
+        {title}
         <br/>
         {major}
         
