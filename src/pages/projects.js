@@ -1,26 +1,57 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { compose } from 'react-compose'
 import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
-
-import { Link } from 'gatsby'
 import TextRow from '../components/TextRow'
 import ProjectCard from '../components/ProjectCard'
+
+import '../assets/scss/projects.scss'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAsterisk } from '@fortawesome/free-solid-svg-icons'
 
+export const query = graphql`
+  query {
+    logos: allFile(filter: { absolutePath: { regex: "/company-logos/" } }) {
+      edges {
+        node {
+          name
+          prettySize
+          childImageSharp {
+            sizes(maxWidth: 600) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 class Projects extends Component {
 
   static propTypes = {}
 
-  state = {}
+  state = {
+    logoImages: null,
+  }
+
+  componentDidMount() {
+
+    this.setState({
+      logoImages: this.props.data.logos.edges.map(e => e.node.childImageSharp.sizes),
+    })
+  }
 
   render() {
     const siteTitle = 'Projects'
     const subTitle = 'Check out our current and previous projects'
+
+    const logoImages = this.state.logoImages
+    console.log(logoImages)
 
     return (
       <Layout title={siteTitle}
@@ -30,8 +61,23 @@ class Projects extends Component {
 
         <TextRow header="Our students have worked at..."
                  subheader=''>
-
         </TextRow>
+
+        <div className="logos-holder">
+          {logoImages && logoImages.map((logoSize, index) => {
+
+            return (
+              <div key={index} className="logo-column">
+                <div className="logo-container">
+                  <Img
+                    // title={name}
+                    sizes={logoSize}
+                  />
+                </div>
+              </div>
+            )
+          })}
+        </div>
 
         {/*<TextRow header="Past Projects"*/}
         {/*subheader='Check out our previous projects.'>*/}

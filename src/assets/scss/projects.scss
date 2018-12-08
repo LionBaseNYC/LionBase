@@ -12,7 +12,7 @@
 ));
 
 
-.biocards-holder {
+.logos-holder {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -22,65 +22,46 @@
   max-width: 1400px;
   padding: 0 2em;
 
-  .biocard-column {
+  .logo-column {
     flex-basis: 20%;
-    padding: 0 1em;
+    padding: 0 2em;
   }
 
-  .biocard {
+  .logo-container {
+    margin: 2em auto;
+    height: 120px;
+    width: 120px;
     position: relative;
-    margin: 1em auto;
-    height: 400px;
-    width: 220px;
-    -webkit-box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.24);
-    -moz-box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.24);
-    box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.24);
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    .img-container {
-      margin: 0 0 1em 0;
-      height: 210px;
-      width: inherit;
-
-      .gatsby-image-wrapper {
-        height: inherit;
-      }
+    .gatsby-image-wrapper {
+      overflow: visible !important;
     }
 
-    .info-container {
-      //height: 130px;
-      padding: 0 1em;
-      p {
-        margin: 0;
-        font-size: 0.8em;
-        line-height: 1.6em;
+    picture {
+      img {
+
+        transition: all .2s ease-in-out;
+        -o-transition: all .10s linear;
+        -moz-transition: all .10s linear;
+        -webkit-transition: all .10s linear;
+        opacity: 0.8 !important;
       }
-      .name {
-        font-size: 1em;
-        font-family: _font(family-main);
-      }
-      .position {
-        margin-bottom: 0.2em;
-      }
-      .major {
-        font-size: 0.7em;
-      }
-    }
-    .icons-container {
-      position: absolute;
-      bottom: 0.2em;
-      width: 100%;
-      a {
-        border-bottom: none;
-        margin: 0 0.3em;
+      img:hover {
+        opacity: 1 !important;
+        transform: scale(1.1);
       }
     }
   }
 }
 
 @include breakpoint(xlarge) {
-  .biocards-holder {
+  .logos-holder {
     //flex-wrap: wrap;
-    .biocard {
+    .logo-container {
       //width: 300px;
       .info-container {
         height: 130px;
@@ -91,32 +72,32 @@
 
 
 @include breakpoint(large) {
-  .biocards-holder {
+  .logos-holder {
     padding: 0 6em;
 
-    .biocard-column {
-      flex-basis: 33.33%;
-      padding: 0 1em;
+    .logo-column {
+      //flex-basis: 33.33%;
+      padding: 0 2em;
     }
-    .biocard {
+    .logo-container {
       //width: 300px;
-      height: 365px;
+      //height: 365px;
     }
   }
 }
 
 
 @include breakpoint(medium) {
-  .biocards-holder {
+  .logos-holder {
     padding: 0 2em;
   }
 }
 
 @include breakpoint(large) {
-  .biocards-holder {
-    .biocard {
+  .logos-holder {
+    .logo-container {
       //width: 300px;
-      height: 350px;
+      //height: 350px;
     }
   }
 }

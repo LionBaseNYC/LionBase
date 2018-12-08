@@ -9,7 +9,6 @@ import BioCard from '../components/BioCard'
 
 import '../assets/scss/about.scss'
 
-import { Link } from 'gatsby'
 import TextRow from '../components/TextRow'
 import BioTextRow from '../components/TextRow'
 import {
@@ -139,9 +138,6 @@ class Apply extends Component {
 
     const { memberData, imageData } = this.state
 
-    console.log(memberData)
-    console.log(imageData)
-
     return (
       <Layout
         title={siteTitle}
@@ -240,7 +236,6 @@ class Apply extends Component {
             {memberData && memberData[1].Team_Lead.map((member, index) => {
 
               let imageID = (member.photo_id) ? member.photo_id : member.name.replace(/[^A-Z0-9]/ig, '')
-              console.log(imageID)
 
               return (
                 <BioCard
@@ -268,7 +263,6 @@ class Apply extends Component {
             {memberData && memberData[2].Client.map((member, index) => {
 
               let imageID = (member.photo_id) ? member.photo_id : member.name.replace(/[^A-Z0-9]/ig, '')
-              console.log(imageID)
 
               return (
                 <BioCard
@@ -295,7 +289,6 @@ class Apply extends Component {
             {memberData && memberData[3].Research.map((member, index) => {
 
               let imageID = (member.photo_id) ? member.photo_id : member.name.replace(/[^A-Z0-9]/ig, '')
-              console.log(imageID)
 
               return (
                 <BioCard
