@@ -1,7 +1,7 @@
 import React from 'react'
 
 import "../assets/scss/main.scss"
-import "../assets/scss/biocard.scss"
+import "../assets/scss/about.scss"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe} from '@fortawesome/free-solid-svg-icons'

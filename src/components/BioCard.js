@@ -6,8 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-import '../assets/scss/biocard.scss'
-
 
 class BioCard extends React.Component {
 
@@ -34,26 +32,34 @@ class BioCard extends React.Component {
     // const image_url = name.replace(/\s/g, '');
     // import image from image_src
     // var icon_render = (icon === null) ? null : <span className={"icon major " + icon}></span>
-
+console.log(major)
     return (
-      <div className="bio_card">
-        <Img
-          title={name}
-          sizes={image_sizes}
-        />
-        <h2>{name}</h2>
-        <p>{position}</p>
-        <p>{major}</p>
+      <div className="biocard-column">
+        <div className="biocard">
 
-        {portfolio_url &&
-        <a href={portfolio_url}><FontAwesomeIcon icon={faGlobe}/></a>
-        }
-        {github_url &&
-        <a href={github_url}><FontAwesomeIcon icon={faGithub}/></a>
-        }
-        {linkedin_url &&
-        <a href={linkedin_url}><FontAwesomeIcon icon={faLinkedin}/></a>
-        }
+          <div className="img-container">
+            <Img
+              title={name}
+              sizes={image_sizes}
+            />
+          </div>
+          <div className="info-container">
+            <p className="name">{name}</p>
+            <p className="position"><i>{position}</i></p>
+            <p className="major">{major}</p>
+          </div>
+          <div className="icons-container">
+            {portfolio_url &&
+            <a target="_blank" href={portfolio_url}><FontAwesomeIcon icon={faGlobe}/></a>
+            }
+            {github_url &&
+            <a target="_blank" href={github_url}><FontAwesomeIcon icon={faGithub}/></a>
+            }
+            {linkedin_url &&
+            <a target="_blank" href={linkedin_url}><FontAwesomeIcon icon={faLinkedin}/></a>
+            }
+          </div>
+        </div>
       </div>
     )
   }

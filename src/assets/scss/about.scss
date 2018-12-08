@@ -1,19 +1,122 @@
-.general-container{
-	padding: 1% 15%;
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import "libs/skel";
+
+@include skel-breakpoints((xlarge: '(max-width: 1680px)',
+        large: '(max-width: 1280px)',
+        medium: '(max-width: 980px)',
+        small: '(max-width: 736px)',
+        xsmall: '(max-width: 480px)',
+        xxsmall: '(max-width: 360px)'
+));
+
+
+.biocards-holder {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 1400px;
+  padding: 0 2em;
+
+  .biocard-column {
+    flex-basis: 20%;
+    padding: 0 1em;
+  }
+
+  .biocard {
+    position: relative;
+    margin: 1em auto;
+    height: 400px;
+    width: 220px;
+    -webkit-box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.24);
+    -moz-box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.24);
+    box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.24);
+
+    .img-container {
+      margin: 0 0 1em 0;
+      height: 210px;
+      width: inherit;
+
+      .gatsby-image-wrapper {
+        height: inherit;
+      }
+    }
+
+    .info-container {
+      //height: 130px;
+      padding: 0 1em;
+      p {
+        margin: 0;
+        font-size: 0.8em;
+        line-height: 1.6em;
+      }
+      .name {
+        font-size: 1em;
+        font-family: _font(family-main);
+      }
+      .position {
+        margin-bottom: 0.2em;
+      }
+      .major {
+        font-size: 0.7em;
+      }
+    }
+    .icons-container {
+      position: absolute;
+      bottom: 0.2em;
+      width: 100%;
+      a {
+        border-bottom: none;
+        margin: 0 0.3em;
+      }
+    }
+  }
 }
-.bio_card{
-	
-	img{
-		height:200px;
-		width:auto;
-	}
 
-	p{
-		line-height: normal;
-	}
+@include breakpoint(xlarge) {
+  .biocards-holder {
+    //flex-wrap: wrap;
+    .biocard {
+      //width: 300px;
+      .info-container {
+        height: 130px;
+      }
+    }
+  }
+}
 
-	a{
-		margin: 5;
-	}
 
+@include breakpoint(large) {
+  .biocards-holder {
+    padding: 0 6em;
+
+    .biocard-column {
+      flex-basis: 33.33%;
+      padding: 0 1em;
+    }
+    .biocard {
+      //width: 300px;
+      height: 365px;
+    }
+  }
+}
+
+
+@include breakpoint(medium) {
+  .biocards-holder {
+    padding: 0 2em;
+  }
+}
+
+@include breakpoint(large) {
+  .biocards-holder {
+    .biocard {
+      //width: 300px;
+      height: 350px;
+    }
+  }
 }

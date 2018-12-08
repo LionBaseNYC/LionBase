@@ -7,6 +7,8 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import BioCard from '../components/BioCard'
 
+import '../assets/scss/about.scss'
+
 import { Link } from 'gatsby'
 import TextRow from '../components/TextRow'
 import BioTextRow from '../components/TextRow'
@@ -34,6 +36,7 @@ export const query = graphql`
               name
               position
               year
+              major
               linkedin_url
               github_url
               portfolio_url
@@ -42,6 +45,7 @@ export const query = graphql`
               name
               position
               year
+              major
               linkedin_url
               github_url
               portfolio_url
@@ -50,17 +54,19 @@ export const query = graphql`
               name
               position
               year
+              major
               linkedin_url
               github_url
-              portfolio_url            
+              portfolio_url      
             }
             Research {
               name
               position
               year
+              major
               linkedin_url
               github_url
-              portfolio_url            
+              portfolio_url          
             }
           }
         }
@@ -197,7 +203,7 @@ class Apply extends Component {
         {/* Executive */}
         <BioTextRow header={execHeader} subheader={subExecHeader}>
 
-          <div className="grid-wrapper">
+          <div className="biocards-holder">
 
             {memberData && memberData[0].Executive.map((member, index) => {
 

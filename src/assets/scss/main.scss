@@ -11,8 +11,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i');
 @import "css-grid";
 
-
-
 @include skel-breakpoints((xlarge: '(max-width: 1680px)',
         large: '(max-width: 1280px)',
         medium: '(max-width: 980px)',
@@ -346,8 +344,7 @@ textarea {
 }
 
 input[type="checkbox"],
-input[type="radio"]
-{
+input[type="radio"] {
   @include vendor('appearance', 'none');
   display: block;
   float: left;

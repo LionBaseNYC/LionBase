@@ -1,7 +1,7 @@
 import Layout from './layout'
 import React, { Component } from 'react'
 
-import "../assets/scss/biocard.scss"
+import "../assets/scss/about.scss"
 
 class BioTextRow extends Component {
 
