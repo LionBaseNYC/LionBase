@@ -49,14 +49,14 @@ console.log(major)
             <p className="major">{major}</p>
           </div>
           <div className="icons-container">
-            {portfolio_url &&
-            <a target="_blank" href={portfolio_url}><FontAwesomeIcon icon={faGlobe}/></a>
+            {linkedin_url &&
+            <a target="_blank" href={linkedin_url}><FontAwesomeIcon icon={faLinkedin}/></a>
             }
             {github_url &&
             <a target="_blank" href={github_url}><FontAwesomeIcon icon={faGithub}/></a>
             }
-            {linkedin_url &&
-            <a target="_blank" href={linkedin_url}><FontAwesomeIcon icon={faLinkedin}/></a>
+            {portfolio_url &&
+            <a target="_blank" href={portfolio_url}><FontAwesomeIcon icon={faGlobe}/></a>
             }
           </div>
         </div>

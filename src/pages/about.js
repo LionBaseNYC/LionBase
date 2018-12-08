@@ -37,6 +37,7 @@ export const query = graphql`
               position
               year
               major
+              photo_id
               linkedin_url
               github_url
               portfolio_url
@@ -46,6 +47,7 @@ export const query = graphql`
               position
               year
               major
+              photo_id
               linkedin_url
               github_url
               portfolio_url
@@ -55,6 +57,7 @@ export const query = graphql`
               position
               year
               major
+              photo_id
               linkedin_url
               github_url
               portfolio_url      
@@ -64,6 +67,7 @@ export const query = graphql`
               position
               year
               major
+              photo_id
               linkedin_url
               github_url
               portfolio_url          
@@ -152,19 +156,19 @@ class Apply extends Component {
         <TextRow header={header} subheader={subHeader}>
           <div className="grid-wrapper">
             <div className="col-4">
-              <FontAwesomeIcon icon={faUserCircle} className="icon style7 major naked"/>
+              <FontAwesomeIcon icon={faUserCircle} className="icon style13 major naked"/>
               {/*<span className="icon style3 major fa-user-circle-o fit"></span>*/}
               <h3>Clients First</h3>
               <p>Build relationships together and place our clients at the center of our work</p>
             </div>
             <div className="col-4">
-              <FontAwesomeIcon icon={faPaintBrush} className="icon style8 major naked"/>
+              <FontAwesomeIcon icon={faPaintBrush} className="icon style10 major naked"/>
               {/*<span className="icon style3 major fa-line-chart fit"></span>*/}
               <h3>Innovation</h3>
               <p>Approach problems from creative perspectives</p>
             </div>
             <div className="col-4">
-              <FontAwesomeIcon icon={faShapes} className="icon style9 major naked"/>
+              <FontAwesomeIcon icon={faShapes} className="icon style12 major naked"/>
               {/*<span className="icon style3 major fa-line-chart fit"></span>*/}
               <h3>Diversity</h3>
               <p>Build diverse teams that value equity, inclusion, and dignity for all</p>
@@ -207,7 +211,7 @@ class Apply extends Component {
 
             {memberData && memberData[0].Executive.map((member, index) => {
 
-              let imageID = member.name.replace(/[^A-Z0-9]/ig, '')
+              let imageID = (member.photo_id) ? member.photo_id : member.name.replace(/[^A-Z0-9]/ig, '')
 
               return (
                 <BioCard
@@ -231,16 +235,84 @@ class Apply extends Component {
         {/* Team Leads */}
         <BioTextRow header={leadHeader} subheader={subLeadHeader}>
 
+          <div className="biocards-holder">
+
+            {memberData && memberData[1].Team_Lead.map((member, index) => {
+
+              let imageID = (member.photo_id) ? member.photo_id : member.name.replace(/[^A-Z0-9]/ig, '')
+              console.log(imageID)
+
+              return (
+                <BioCard
+                  key={index}
+                  name={member.name}
+                  position={member.position}
+                  year={member.year}
+                  major={member.major}
+                  portfolio_url={member.portfolio_url}
+                  github_url={member.github_url}
+                  linkedin_url={member.linkedin_url}
+                  image_sizes={imageData[imageID].sizes}
+                />
+              )
+            })}
+
+          </div>
+
         </BioTextRow>
 
         {/* Client */}
         <BioTextRow header={teamHeader} subheader={subTeamHeader}>
+          <div className="biocards-holder">
 
+            {memberData && memberData[2].Client.map((member, index) => {
+
+              let imageID = (member.photo_id) ? member.photo_id : member.name.replace(/[^A-Z0-9]/ig, '')
+              console.log(imageID)
+
+              return (
+                <BioCard
+                  key={index}
+                  name={member.name}
+                  position={member.position}
+                  year={member.year}
+                  major={member.major}
+                  portfolio_url={member.portfolio_url}
+                  github_url={member.github_url}
+                  linkedin_url={member.linkedin_url}
+                  image_sizes={imageData[imageID].sizes}
+                />
+              )
+            })}
+
+          </div>
         </BioTextRow>
 
         {/* Research */}
         <BioTextRow header={researchHeader} subheader={subResearchHeader}>
+          <div className="biocards-holder">
 
+            {memberData && memberData[3].Research.map((member, index) => {
+
+              let imageID = (member.photo_id) ? member.photo_id : member.name.replace(/[^A-Z0-9]/ig, '')
+              console.log(imageID)
+
+              return (
+                <BioCard
+                  key={index}
+                  name={member.name}
+                  position={member.position}
+                  year={member.year}
+                  major={member.major}
+                  portfolio_url={member.portfolio_url}
+                  github_url={member.github_url}
+                  linkedin_url={member.linkedin_url}
+                  image_sizes={imageData[imageID].sizes}
+                />
+              )
+            })}
+
+          </div>
         </BioTextRow>
 
       </Layout>

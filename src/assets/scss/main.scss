@@ -598,7 +598,7 @@ input[type="radio"] {
 
   &.style10 {
     > path {
-      fill: #f9ca24;
+      fill: #3498db;
     }
   }
 
@@ -607,6 +607,19 @@ input[type="radio"] {
       fill: _palette(bg);
     }
   }
+
+  &.style12 {
+    > path {
+      fill: #f9ca24;
+    }
+  }
+
+  &.style13 {
+    > path {
+      fill: #2ecc71;
+    }
+  }
+
 
   &.major {
     @include icon;
