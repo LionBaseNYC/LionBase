@@ -135,7 +135,7 @@
             <entry file="file://$PROJECT_DIR$/src/pages/projects.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="300">
-                  <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+                  <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
                 </state>
               </provider>
             </entry>
@@ -143,8 +143,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/pages/about.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2548">
-                  <caret line="172" column="13" lean-forward="true" selection-start-line="172" selection-start-column="13" selection-end-line="172" selection-end-column="13" />
+                <state relative-caret-position="2083">
+                  <caret line="172" column="13" selection-start-line="172" selection-start-column="13" selection-end-line="172" selection-end-column="13" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
                   </folding>
@@ -181,7 +181,7 @@
             <entry file="file://$PROJECT_DIR$/src/assets/scss/_css-grid.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="405">
-                  <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+                  <caret line="27" selection-start-line="27" selection-end-line="27" />
                 </state>
               </provider>
             </entry>
@@ -190,7 +190,7 @@
             <entry file="file://$PROJECT_DIR$/src/assets/scss/about.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="480">
-                  <caret line="69" column="20" lean-forward="true" selection-end-line="121" selection-end-column="1" />
+                  <caret line="69" column="20" selection-end-line="121" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -503,12 +503,12 @@
       <workItem from="1542089542745" duration="44000" />
       <workItem from="1542338759240" duration="13998000" />
       <workItem from="1542354601681" duration="33000" />
-      <workItem from="1544259100252" duration="14676000" />
+      <workItem from="1544259100252" duration="14877000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55448000" />
+    <option name="totallyTimeSpent" value="55649000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1808" height="1110" extended-state="0" />
@@ -792,7 +792,7 @@
     <entry file="file://$PROJECT_DIR$/src/assets/scss/_css-grid.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
@@ -816,7 +816,7 @@
     <entry file="file://$PROJECT_DIR$/src/assets/scss/about.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="69" column="20" lean-forward="true" selection-end-line="121" selection-end-column="1" />
+          <caret line="69" column="20" selection-end-line="121" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -830,14 +830,14 @@
     <entry file="file://$PROJECT_DIR$/src/pages/projects.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/about.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2548">
-          <caret line="172" column="13" lean-forward="true" selection-start-line="172" selection-start-column="13" selection-end-line="172" selection-end-column="13" />
+        <state relative-caret-position="2083">
+          <caret line="172" column="13" selection-start-line="172" selection-start-column="13" selection-end-line="172" selection-end-column="13" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
