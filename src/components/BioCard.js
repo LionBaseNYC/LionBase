@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from "gatsby-image";
 
 import "../assets/scss/main.scss"
 import "../assets/scss/biocard.scss"
@@ -16,12 +17,12 @@ class BioCard extends React.Component {
     portfolio_url: '',
     github_url: '',
     linkedin_url: '',
-    image_src: '',
   }
 
 
   render() {
-    const {name, title, major, portfolio_url, github_url, linkedin_url, image_src} = this.props;
+    const {name, title, major, portfolio_url, github_url, linkedin_url} = this.props;
+    const image_url = name.replace(/\s/g, '');
     // import image from image_src
     // var icon_render = (icon === null) ? null : <span className={"icon major " + icon}></span>
 

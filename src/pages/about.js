@@ -8,9 +8,19 @@ import Layout from '../components/layout'
 import { Link } from 'gatsby'
 import TextRow from '../components/TextRow'
 import BioTextRow from '../components/TextRow'
-import { faUserCircle, faHandshake, faChartLine, faPaintBrush, faPeopleCarry, faShapes, faUsers, faMicroscope, faBriefcase } from '@fortawesome/free-solid-svg-icons'
+import {
+  faUserCircle,
+  faHandshake,
+  faChartLine,
+  faPaintBrush,
+  faPeopleCarry,
+  faShapes,
+  faUsers,
+  faMicroscope,
+  faBriefcase,
+} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import "../assets/scss/biocard.scss"
+import '../assets/scss/biocard.scss'
 
 import AileenCano from '../assets/images/member-photos/AileenCano.jpeg'
 import AlexKim from '../assets/images/member-photos/AlexKim.png'
@@ -63,32 +73,109 @@ import WilliamLingxiaoTong from '../assets/images/member-photos/WilliamLingxiaoT
 import XinchenZhai from '../assets/images/member-photos/XinchenZhai.jpg'
 import ZacharyGeddes from '../assets/images/member-photos/ZacharyGeddes.png'
 
-import BioCard from "../components/BioCard"
+// import {images} from '../assets/helpers/image-import';
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
+import BioCard from '../components/BioCard'
 
-
+export const query = graphql`
+  query {
+    members: allJson {
+      edges {
+        node {
+          Teams {
+            Executive {
+              name
+              position
+              year
+              linkedin_url
+              github_url
+              portfolio_url
+            }
+            Team_Lead {
+              name
+              position
+              year
+              linkedin_url
+              github_url
+              portfolio_url
+            }
+            Client {
+              name
+              position
+              year
+              linkedin_url
+              github_url
+              portfolio_url            
+            }
+            Research {
+              name
+              position
+              year
+              linkedin_url
+              github_url
+              portfolio_url            
+            }
+          }
+        }
+      }
+    }
+    headshots: allFile(filter: { absolutePath: { regex: "/member-photos/" } }) {
+      edges {
+        node {
+          name
+          prettySize
+          childImageSharp {
+            sizes(maxWidth: 600) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 class Apply extends Component {
 
   static propTypes = {}
 
-  state = {}
+  state = {
+    imageData: null,
+    memberData: null,
+  }
+
+  componentDidMount() {
+    this.setState({
+      memberData: this.props.data.members.edges[0].node,
+      imageData: this.props.data.headshots.edges.map(e => e.node),
+    })
+  }
 
   render() {
-    const siteTitle = 'About Us'
-    const subTitle = 'Learn more about who we are and what we do'
-    const header = 'Our Core Values'
-    const subHeader = 'LionBase is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications.'
-    const structHeader = 'Our Team Structure'
-    const subStructHeader = 'We have three primary groups: client teams, research teams, and the executive team'
-    const execHeader = 'Executive Team'
-    const subExecHeader = 'Meet the organizers of LionBase'
-    const leadHeader = 'Team Leads'
-    const subLeadHeader = 'Meet the client-facing project leads'
-    const teamHeader = 'Client Team Members'
-    const subTeamHeader = 'Meet the people who build our products alongside the team leads'
-    const researchHeader = 'Research Team Members'
-    const subResearchHeader = 'Meet the people expanding our understanding of data science'
+    // console.log(images);
+    const
+      siteTitle = 'About Us',
+      subTitle = 'Learn more about who we are and what we do',
+      header = 'Our Core Values',
+      subHeader = 'LionBase is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications.',
+      structHeader = 'Our Team Structure',
+      subStructHeader = 'We have three primary groups: client teams, research teams, and the executive team',
+      execHeader = 'Executive Team',
+      subExecHeader = 'Meet the organizers of LionBase',
+      leadHeader = 'Team Leads',
+      subLeadHeader = 'Meet the client-facing project leads',
+      teamHeader = 'Client Team Members',
+      subTeamHeader = 'Meet the people who build our products alongside the team leads',
+      researchHeader = 'Research Team Members',
+      subResearchHeader = 'Meet the people expanding our understanding of data science'
+
+    const {memberData, imageData} = this.state;
+
+    console.log(memberData)
+    console.log(imageData)
+
     return (
       <Layout
         title={siteTitle}
@@ -98,7 +185,7 @@ class Apply extends Component {
 
         {/* KEV TODO */}
         {/* <BioCard name={} title={} major={} portfolio_url={}/> */}
-        
+
 
         <TextRow header={header} subheader={subHeader}>
           <div className="grid-wrapper">
@@ -125,19 +212,21 @@ class Apply extends Component {
         </TextRow>
 
         <TextRow header={structHeader} subheader={subStructHeader}>
-        <div className="grid-wrapper">
+          <div className="grid-wrapper">
             <div className="col-4">
               <FontAwesomeIcon icon={faUsers} className="icon style7 major naked"/>
               {/*<span className="icon style3 major fa-user-circle-o fit"></span>*/}
               <h3>Client Teams</h3>
-              <p>Each client team consists of 6-8 students with significant experience in data science or product development.
+              <p>Each client team consists of 6-8 students with significant experience in data science or product
+                development.
               </p>
             </div>
             <div className="col-4">
               <FontAwesomeIcon icon={faMicroscope} className="icon style8 major naked"/>
               {/*<span className="icon style3 major fa-line-chart fit"></span>*/}
               <h3>Research Teams</h3>
-              <p>Our research teams perform regular exploration of various data science fields to improve our work internally.</p>
+              <p>Our research teams perform regular exploration of various data science fields to improve our work
+                internally.</p>
             </div>
             <div className="col-4">
               <FontAwesomeIcon icon={faBriefcase} className="icon style9 major naked"/>
@@ -149,379 +238,31 @@ class Apply extends Component {
 
         </TextRow>
 
-      <BioTextRow header={execHeader} subheader={subExecHeader}>
-         
-           <div className = "grid-wrapper">
-           <div className = "col-4">
-            <BioCard  name={'Kevin Le'} title = {'Executive'} major={'Operations Research'} 
-                      linkedin_url={'https://www.linkedin.com/in/kevin-le1/'} image_src ={KevinLe}/>
+        <BioTextRow header={execHeader} subheader={subExecHeader}>
 
-            </div>
+          <div className="grid-wrapper">
+            {/*<div className="col-4">*/}
+              {/*<BioCard name={'Kevin Le'} title={'Executive'} major={'Operations Research'}*/}
+                       {/*linkedin_url={'https://www.linkedin.com/in/kevin-le1/'}/>*/}
 
-            <div className = "col-4">
-            <BioCard  name={'Tommy Polanco'} title = {'Executive'} major={'Applied Math'} 
-                      linkedin_url={'https://www.linkedin.com/in/tommy-polanco/'}
-                      image_src ={TommyPolanco}/>
-            </div>
-            
-                      
-          
-            <div className = "col-4">
-            <BioCard  name={'Morgan Kang'} title = {'Executive'} major={'History & Business'} 
-                      linkedin_url={'https://www.linkedin.com/in/morgankang/'}
-                      image_src ={MorganKang}/>
-            </div>
-            
-                      
-        
-            <div className = "col-4">
-            <BioCard  name={'Andrew Rodriguez'} title = {'Executive'} major={'Biology & Business'} 
-                      linkedin_url={'https://www.linkedin.com/in/andrew-rodriguez-001981149/'}
-                      image_src ={AndrewRodriguez}/>
-            </div>
-          
-                      
-            <div className = "col-4">
-            <BioCard  name={'Alex Kim'} title = {'Executive'} major={'Biomedical Engineering & Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/alex-g-kim/'}
-                      image_src ={AlexKim}/>
-            </div>
-                      
-         
-      </div>
-
-    </BioTextRow>
-
-
-      <BioTextRow header = {leadHeader} subheader ={subLeadHeader}>
-        <div className = "grid-wrapper">
-          <div className="col-3">
-            <BioCard  name={'Katrina Francis'} title = {'Team Lead'} major={'Operations Research'} 
-                      portfolio_url={'http://www.columbia.edu/~klf2133/'}
-                      image_src ={KatrinaFrancis}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Nelson Lin'} title = {'Team Lead'} major={'Mechanical Engineering'} 
-                      portfolio_url={'http://www.nelsonlinvents.com'}
-                      image_src ={NelsonLin}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Patrick Lewis'} title = {'Team Lead'} major={'Data Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/patrick-ian-lewis/'}
-                      image_src ={PatrickIanLewis}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'David Reiss-Mello'} title = {'Team Lead'} major={'Operations Research'} 
-                      linkedin_url={'https://www.linkedin.com/in/davidreissmello'}
-                      image_src ={DavidReissMello}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Carlos Enrique Eguiluz Rosas'} title = {'Associate Lead'} major={'Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/ceguiluzrosas/'}
-                      image_src ={CarlosEnriqueEguiluzRosas}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'William Zheng'} title = {'Associate Lead'} major={'Applied Math'} 
-                      linkedin_url={'https://www.linkedin.com/in/william-j-zheng/'}
-                      image_src ={WilliamJiaChengZheng}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Sian Lee Kitt'} title = {'Associate Lead'} major={'Computer Science & Applied Math'} 
-                      portfolio_url={'http://sianlee.ml'}
-                      image_src ={SianLeeKitt}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Emily Wang'} title = {'Associate Lead'} major={'Operations Research'} 
-                      linkedin_url={'https://www.linkedin.com/in/ewang19/'}
-                      image_src ={EmilyYuAnWang}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Gabriel Benedict'} title = {'Statistics Consultant'} major={'Statistics'} 
-                      portfolio_url={'https://gabriben.github.io/'}
-                      image_src ={GabrielBenedict}/>
-                      
-          </div>
+            {/*</div>*/}
 
           </div>
-  
-      </BioTextRow>
 
-      <BioTextRow header={teamHeader} subheader={subTeamHeader}>
-      <div className = "grid-wrapper">
-          <div className="col-3">
-            <BioCard  name={'Huijuan Zhang'} title = {'Client Team'} major={'Biostatistics'} 
-                      linkedin_url={'https://www.linkedin.com/in/huijuanzhang/'}
-                      image_src ={HuijuanZhang}/>
-                      
-          </div>
+        </BioTextRow>
 
-          <div className="col-3">
-            <BioCard  name={'Joon Kyun'} title = {'Client Team'} major={'Math & Statistics'} 
-                      linkedin_url={'https://www.linkedin.com/in/joon-kyun-666211174/'}
-                      image_src ={JoonKyun}/>
-                      
-          </div>
 
-          <div className="col-3">
-            <BioCard  name={'Ivana Moore'} title = {'Client Team'} major={'Poli Sci & Statistics'} 
-                      linkedin_url={'https://www.linkedin.com/in/ivana-moore-74a2a4148/'}
-                      image_src ={IvanaMoore}/>
-                      
-          </div>
+        <BioTextRow header={leadHeader} subheader={subLeadHeader}>
 
-          <div className="col-3">
-            <BioCard  name={'Pranav Shrestha'} title = {'Client Team'} major={'Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/shresthapranav/'}
-                      image_src ={PranavShrestha}/>
-                      
-          </div>
+        </BioTextRow>
 
-          <div className="col-3">
-            <BioCard  name={'Hidy Yi'} title = {'Client Team'} major={'Applied Math'} 
-                      linkedin_url={'https://www.linkedin.com/in/hidy-yi-711ba7132/'}
-                      image_src ={HidyYi}/>
-                      
-          </div>
+        <BioTextRow header={teamHeader} subheader={subTeamHeader}>
 
-          <div className="col-3">
-            <BioCard  name={'Raghav Mecheri'} title = {'Client Team'} major={'Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/raghavmecheri/'}
-                      image_src ={RaghavMecheri}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'The Ngo'} title = {'Client Team'} major={'Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/thengo/'}
-                      image_src ={TheBaoNgo}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Frank Zhai'} title = {'Client Team'} major={'Operations Research'} 
-                      linkedin_url={'https://www.linkedin.com/in/xinchen-zhai/'}
-                      image_src ={XinchenZhai}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Irene Nam'} title = {'Client Team'} major={'Operations Research'} 
-                      linkedin_url={'https://www.linkedin.com/in/ireneynam/'}
-                      image_src ={IreneNam}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Ericka Wu'} title = {'Client Team'} major={'Data Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/ericka-wu-450549158/'}
-                      image_src ={ErickaWu}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Dagmawi Sraj'} title = {'Client Team'} major={'Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/dagmawi-sraj-946039154/'}
-                      image_src ={DagmawiSraj}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Helen Jin'} title = {'Client Team'} major={'Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/jin-helen/'}
-                      image_src ={HelenJin}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Harrison Wang'} title = {'Client Team'} major={'Computer Science'} 
-                      linkedin_url={'linkedin.com/in/harrisonwang12'}
-                      image_src ={HarrisonBingWang}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Mingxuan Teng'} title = {'Client Team'} major={'Acturial Science'} 
-                      linkedin_url={'www.linkedin.com/in/mingxuanteng'}
-                      image_src ={MingxuanTeng}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Ongun Uzay Macar'} title = {'Client Team'} major={'Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/uzaymacar/'}
-                      image_src ={OngunUzayMacar}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Abby Lu'} title = {'Client Team'} major={'Computer Science'} 
-                      image_src ={HuiLu}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Gitika Bose'} title = {'Client Team'} major={'Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/gitikabose/'}
-                      image_src ={GitikaBose}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Heyang Huang'} title = {'Client Team'} major={'Financial Engineering'} 
-                      linkedin_url={'www.linkedin.com/in/heyang-huang-0176bb155'}
-                      image_src ={HeyangHuang}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Cherie Chu'} title = {'Client Team'} major={'Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/cherie-chu'}
-                      image_src ={CherieChu}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Peranut Nimitsurachat'} title = {'Client Team'} major={'Econ-Statistics & Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/phee-nimitsurachat/'}
-                      image_src ={PeranutNimitsurachat}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Brian Ho'} title = {'Client Team'} major={'Math & Statistics'} 
-                      linkedin_url={'https://www.linkedin.com/in/brian-ho-15bb61168'}
-                      image_src ={BrianLingHo}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Pierre Rodgers'} title = {'Client Team'} major={'Computer Science'} 
-                      linkedin_url={'www.linkedin.com/in/pierre-rodgers'}
-                      image_src ={PierreRodgers}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'William Tong'} title = {'Client Team'} major={'Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/william-tong-693632133/'}
-                      image_src ={WilliamLingxiaoTong}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Sharon Jin'} title = {'Client Team'} major={'Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/sharon-jin-728b55152/'}
-                      image_src ={SharonJin}/>
-                      
-          </div>
-          </div>
         </BioTextRow>
 
         <BioTextRow header={researchHeader} subheader={subResearchHeader}>
 
-        <div className = "grid-wrapper">
 
-          <div className="col-3">
-            <BioCard  name={'Sohbet Dovranov'} title = {'Research Team'} major={'Economics & Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/sohbet-dovranov-a6a999110'}
-                      image_src ={SohbetDovranov}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Miriam Linz'} title = {'Research Team'} major={'Philosophy & Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/miriam-linz-b86a14173/'}
-                      image_src ={MiriamLinz}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Haley So'} title = {'Research Team'} major={'Electrical Engineering'} 
-                      linkedin_url={'https://www.linkedin.com/in/haleyso/'}
-                      image_src ={HaleySo}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Tejit Pabari'} title = {'Research Team'} major={'Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/tejitpabari/'}
-                      image_src ={TejitPabari}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Brandon Zhang'} title = {'Research Team'} major={'Applied Math'} 
-                      linkedin_url={'https://www.linkedin.com/in/brandon-zhang-5aa859149/'}
-                      image_src ={BrandonWilliamZhang}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Ibrahim Nawaz Khan'} title = {'Research Team'} major={'Economics'} 
-                      linkedin_url={'https://www.linkedin.com/in/ibrahim-khan/'}
-                      image_src ={IbrahimNawazKhan}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Ian Loeb'} title = {'Research Team'} major={'Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/ian-loeb/'}
-                      image_src ={IanLoeb}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Nitasha Nair'} title = {'Research Team'} major={'Environmental Policy'} 
-                      linkedin_url={'https://www.linkedin.com/in/nitasha-nair-198974a/'}
-                      image_src ={NitashaNair}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Brennan McManus'} title = {'Research Team'} major={'Linguistics & Computer Science'} 
-                      linkedin_url={'linkedin.com/in/brennan-mcmanus'}
-                      image_src ={BrennanXavierMcManus}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Aileen Cano'} title = {'Research Team'} major={'Computer Science'} 
-                      image_src ={AileenCano}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Ki Cooley-Winters'} title = {'Research Team'} major={'Statistics'} 
-                      linkedin_url={'https://www.linkedin.com/in/ki-cooley-winters-a4b45a169/'}
-                      image_src ={KiCooleyWinters}/>
-                      
-          </div>
-
-          <div className="col-3">
-            <BioCard  name={'Zachary Geddes'} title = {'Research Team'} major={'Computer Science'} 
-                      linkedin_url={'https://www.linkedin.com/in/zgeddes/'}
-                      image_src ={ZacharyGeddes}/>
-                      
-          </div>
-
-
-        </div>
         </BioTextRow>
 
       </Layout>
