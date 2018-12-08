@@ -1,5 +1,6 @@
 # Project dependencies
 .cache
+.idea
 node_modules
 yarn-error.log
 package-lock.json
@@ -7,6 +8,8 @@ yarn.lock
 
 # Build directory
 .DS_Store
+
+
 
 # Created by https://www.gitignore.io/api/node
 # Edit at https://www.gitignore.io/?templates=node
