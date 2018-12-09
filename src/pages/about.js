@@ -124,7 +124,7 @@ class Apply extends Component {
       siteTitle = 'About Us',
       subTitle = 'Learn more about who we are and what we do',
       header = 'Our Core Values',
-      subHeader = 'LionBase is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications.',
+      subHeader = 'LionBase works to foster inclusivity at the intersection of data science and product development by connecting students and companies through impactful data products.',
       structHeader = 'Our Team Structure',
       subStructHeader = 'We have three primary groups: client teams, research teams, and the executive team',
       execHeader = 'Executive Team',
