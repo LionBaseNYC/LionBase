@@ -17,7 +17,7 @@ class Homepage extends React.Component {
     const siteTitle = 'LIONBASE'
     const subTitle = 'Columbia student driven solutions for industry problems'
     const header = 'Our mission is to learn and deliver.'
-    const subHeader = 'LionBase is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications. We work closely with companies to understand their problem and deliver data centric solutions.'
+    const subHeader = 'LionBase works to foster inclusivity at the intersection of data science and product development by connecting students and companies through impactful data products.'
 
     return (
       <Layout
