@@ -12,8 +12,8 @@
           "gender": "Male",
           "photo_id": "",
           "linkedin_url": "https://www.linkedin.com/in/kevin-le1/",
-          "github_url": "",
-          "portfolio_url": "",
+          "github_url": "https://github.com/KevinLe1",
+          "portfolio_url": "http://kevinle.co/",
           "financial_aid": "Yes",
           "first_gen": "",
           "biography": ""
@@ -113,7 +113,7 @@
           "photo_id": "",
           "linkedin_url": "",
           "github_url": "",
-          "portfolio_url": "Nelsonlinvents.com",
+          "portfolio_url": "https://www.nelsonlinvents.com/",
           "financial_aid": "No",
           "first_gen": "Yes",
           "biography": "Nelson is a graduate student at Columbia University and a former engineering intern at both Apple and Microsoft (so he can tell you which labtop is better). He led the team that won the 2016 ASME international student design competition and was a finalist at PrincetonHacks 2017. He spends his free time reading papers about deep learning and telling bad jokes to strangers on stage."
@@ -225,7 +225,7 @@
           "photo_id": "",
           "linkedin_url": "",
           "github_url": "",
-          "portfolio_url": "gabriben.github.io",
+          "portfolio_url": "https://gabriben.github.io/",
           "financial_aid": "No",
           "first_gen": "No",
           "biography": "?"
