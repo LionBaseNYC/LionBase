@@ -36,6 +36,13 @@ xxsmall: '(max-width: 360px)'
     a {
       border-bottom: none;
     }
+
+    &.action {
+      background-color: #dc143c;
+      padding: 0 0.5em;
+      border-radius: 5px;
+      box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.38);
+    }
   }
 }
 

@@ -46,7 +46,7 @@ class NavBar extends Component {
             <div className="divider"/>
             <Link id="contact" className="menu-item" to="/contact">Contact Us</Link>
             <div className="divider"/>
-            <Link id="apply" className="menu-item" to="/apply">Apply</Link>
+            <Link id="apply" className="menu-item action" to="/apply">Schedule a Consultation</Link>
             <div className="divider"/>
           </Menu>
         </div>
@@ -68,8 +68,8 @@ class NavBar extends Component {
           <div className="nav-item">
             <Link to="/contact">Contact Us</Link>
           </div>
-          <div className="nav-item">
-            <Link to="/apply">Apply</Link>
+          <div className="nav-item action">
+            <Link to="/apply">Schedule a Consultation</Link>
           </div>
         </div>
 

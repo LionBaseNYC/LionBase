@@ -25,31 +25,26 @@ class Apply extends Component {
   state = {}
 
   render() {
-    const siteTitle = 'Apply'
-    const subTitle = 'Learn more about how you can work with us'
+    const siteTitle = 'WORK WITH US'
+    const subTitle = '.'
     const header = ''
     const subHeader = ''
 
     return (
       <Layout
         title={siteTitle}
-        subtitle={subTitle}
-        navbar_children={
-          <div className="actions-box">
-            <ul className="actions">
-              <li><Link to="/apply/#client" className="button scrolly">For Companies</Link></li>
-            </ul>
-            <ul className="actions">
-              <li><Link to="/apply/#student" className="button scrolly">For Students</Link></li>
-            </ul>
-          </div>
-        }
+        subtitle={<span>
+          Send us inquiries or schedule a consultation with us{' '}
+          <a href="https://lionbase1.typeform.com/to/ZQXVCO" target="_blank">
+            <span className="highlight">here</span>
+          </a>
+        </span>}
       >
         <Helmet title={siteTitle}/>
 
         <div id="client"></div>
-        <TextRow id="client" header="Companies"
-                 subheader="Why work with LionBase?">
+        <TextRow id="client" header="Why work with LionBase?"
+                 subheader="">
           <div className="card-container">
             <div className="project-card">
               <FontAwesomeIcon icon={faPencilRuler} className="icon style7 major naked"/>
@@ -86,43 +81,9 @@ class Apply extends Component {
             </div>
           </div>
         </TextRow>
-        <div className="align-center">
+        {/* <div className="align-center">
           <a target="_blank" href="https://lionbase1.typeform.com/to/ZQXVCO" className="button style4">Client Inquiry Application</a>
-        </div>
-
-        <div id="student"></div>
-        <TextRow header="Student Tracks"
-                 subheader="Why join LionBase?">
-          <div className="card-container">
-            <div className="project-card">
-              <FontAwesomeIcon icon={faTerminal} className="icon style7 major naked"/>
-              {/*<span className="icon major fa-terminal style7 fit"></span>*/}
-              <h4>Product Development</h4>
-              <p>For students interested in product-based problems, such as design, back-end / front-end / full-stack
-                development, and software engineering.</p>
-            </div>
-            <div className="project-card">
-              <FontAwesomeIcon icon={faSignal} className="icon style7 major naked"/>
-              {/*<span className="icon major fa-signal style7 fit"></span>*/}
-              <h4>Data Science</h4>
-              <p>For students interested in mathematical and analytical problems such as statistical analysis, data
-                analysis, machine learning, and natural language processing.</p>
-            </div>
-            <div className="project-card">
-              <FontAwesomeIcon icon={faGraduationCap} className="icon style7 major naked"/>
-              {/*<span className="icon major fa-graduation-cap style7 fit"></span>*/}
-              <h4>Mentorship</h4>
-              <p>For students with limited experience but an eagerness to learn applicable data science and product
-                development skills.</p>
-            </div>
-
-          </div>
-        </TextRow>
-        <div className="align-center">
-          <a target="_blank"
-             href="https://docs.google.com/forms/d/e/1FAIpQLScMghB7rFjjQriIBcFzi6BbCKbiSNgMWPEciaJW9WoXfnFNew/viewform"
-             className="button style4">Student Application</a>
-        </div>
+        </div> */}
 
       </Layout>
     )

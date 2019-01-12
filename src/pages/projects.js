@@ -47,7 +47,7 @@ class Projects extends Component {
   }
 
   render() {
-    const siteTitle = 'Projects'
+    const siteTitle = 'PROJECTS'
     const subTitle = 'Check out our current and previous projects'
 
     const logoImages = this.state.logoImages

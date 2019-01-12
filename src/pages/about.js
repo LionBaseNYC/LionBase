@@ -21,9 +21,11 @@ import {
   faUsers,
   faMicroscope,
   faBriefcase,
+  faCode,
+  faBolt,
+  faCalendar,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 
 export const query = graphql`
   query {
@@ -59,7 +61,7 @@ export const query = graphql`
               photo_id
               linkedin_url
               github_url
-              portfolio_url      
+              portfolio_url
             }
             Research {
               name
@@ -69,7 +71,7 @@ export const query = graphql`
               photo_id
               linkedin_url
               github_url
-              portfolio_url          
+              portfolio_url
             }
           }
         }
@@ -92,7 +94,6 @@ export const query = graphql`
 `
 
 class Apply extends Component {
-
   static propTypes = {}
 
   state = {
@@ -107,8 +108,8 @@ class Apply extends Component {
     for (var i = 0; i < headshotData.length; i++) {
       imageDict[headshotData[i].node.name] = {
         // 'id': headshotData[i].node.id,
-        'name': headshotData[i].node.name,
-        'sizes': headshotData[i].node.childImageSharp.sizes,
+        name: headshotData[i].node.name,
+        sizes: headshotData[i].node.childImageSharp.sizes,
       }
     }
 
@@ -120,198 +121,314 @@ class Apply extends Component {
 
   render() {
     // console.log(images);
-    const
-      siteTitle = 'About Us',
+    const siteTitle = 'ABOUT US',
       subTitle = 'Learn more about who we are and what we do',
       header = 'Our Core Values',
-      subHeader = 'LionBase is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications.',
+      subHeader =
+        'LionBase is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications.',
       structHeader = 'Our Team Structure',
-      subStructHeader = 'We have three primary groups: client teams, research teams, and the executive team',
+      subStructHeader =
+        'We have three primary groups: client teams, research teams, and the executive team',
       execHeader = 'Executive Team',
       subExecHeader = 'Meet the organizers of LionBase',
       leadHeader = 'Team Leads',
       subLeadHeader = 'Meet the client-facing project leads',
       teamHeader = 'Client Team Members',
-      subTeamHeader = 'Meet the people who build our products alongside the team leads',
+      subTeamHeader =
+        'Meet the people who build our products alongside the team leads',
       researchHeader = 'Research Team Members',
-      subResearchHeader = 'Meet the people expanding our understanding of data science'
+      subResearchHeader =
+        'Meet the people expanding our understanding of data science'
 
     const { memberData, imageData } = this.state
 
     return (
-      <Layout
-        title={siteTitle}
-        subtitle={subTitle}
-      >
-        <Helmet title={siteTitle}/>
+      <Layout title={siteTitle} subtitle={subTitle}>
+        <Helmet title={siteTitle} />
 
         {/* KEV TODO */}
         {/* <BioCard name={} title={} major={} portfolio_url={}/> */}
+        <section id="two" className="main style1">
+          <ul className="major-icons card-container">
+            <li>
+              <div className="grid-card">
+                <FontAwesomeIcon icon={faCode} className="icon style4 major" />
+                {/*<span className="icon style1 major fa-code"></span>*/}
+                <h3>Who We Are</h3>
+                <p>
+                  We are a group of Columbia students passionate about working
+                  on real-world data problems.{' '}
+                </p>
+              </div>
+            </li>
+            <li>
+              <div className="grid-card">
+                <FontAwesomeIcon icon={faBolt} className="icon style4 major" />
+                <h3>What We Do</h3>
+                <p>
+                  We focus on exploring data projects related to Data Analytics,
+                  Machine Learning, NLP, Statistical Analysis, and more.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div className="grid-card">
+                <FontAwesomeIcon
+                  icon={faCalendar}
+                  className="icon style4 major"
+                />
+                <h3>How We Work</h3>
+                <p>
+                  Students learn through exploratory projects for companies
+                  while building genuine relationships.
+                </p>
+              </div>
+            </li>
+          </ul>
+          <div className="grid-wrapper" />
+        </section>
 
+        <section id="two" className="main style4 statistics">
+          <ul className="major-icons card-container">
+            <li>
+              <div className="grid-card">
+                <h1>18%</h1>
+                <p>Underrepresented Minority</p>
+              </div>
+            </li>
+            <li>
+              <div className="grid-card">
+                <h1>34%</h1>
+                <p>Female</p>
+              </div>
+            </li>
+            <li>
+              <div className="grid-card">
+                <h1>48%</h1>
+                <p>Receiving Financial Aid</p>
+              </div>
+            </li>
+            <li>
+              <div className="grid-card">
+                <h1>28%</h1>
+                <p>First-Generation Students</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section id="two" className="main style7 statistics">
+          <ul className="major-icons card-container">
+            <li>
+              <div className="grid-card">
+                <h1>44%</h1>
+                <p>Computer Science</p>
+              </div>
+            </li>
+            <li>
+              <div className="grid-card">
+                <h1>16%</h1>
+                <p>Operations Research</p>
+              </div>
+            </li>
+            <li>
+              <div className="grid-card">
+                <h1>22%</h1>
+                <p>Applied Math or Statistics</p>
+              </div>
+            </li>
+            <li>
+              <div className="grid-card">
+                <h1>18%</h1>
+                <p>Other</p>
+              </div>
+            </li>
+          </ul>
+        </section>
 
-        <TextRow header={header} subheader={subHeader}>
+        <TextRow header={header} subheader={<p>{subHeader}</p>}>
           <div className="grid-wrapper">
             <div className="col-4">
-              <FontAwesomeIcon icon={faUserCircle} className="icon style13 major naked"/>
+              <FontAwesomeIcon
+                icon={faUserCircle}
+                className="icon style13 major naked"
+              />
               {/*<span className="icon style3 major fa-user-circle-o fit"></span>*/}
               <h3>Clients First</h3>
-              <p>Build relationships together and place our clients at the center of our work</p>
+              <p>
+                Build relationships together and place our clients at the center
+                of our work
+              </p>
             </div>
             <div className="col-4">
-              <FontAwesomeIcon icon={faPaintBrush} className="icon style10 major naked"/>
+              <FontAwesomeIcon
+                icon={faPaintBrush}
+                className="icon style10 major naked"
+              />
               {/*<span className="icon style3 major fa-line-chart fit"></span>*/}
               <h3>Innovation</h3>
               <p>Approach problems from creative perspectives</p>
             </div>
             <div className="col-4">
-              <FontAwesomeIcon icon={faShapes} className="icon style12 major naked"/>
+              <FontAwesomeIcon
+                icon={faShapes}
+                className="icon style12 major naked"
+              />
               {/*<span className="icon style3 major fa-line-chart fit"></span>*/}
               <h3>Diversity</h3>
-              <p>Build diverse teams that value equity, inclusion, and dignity for all</p>
+              <p>
+                Build diverse teams that value equity, inclusion, and dignity
+                for all
+              </p>
             </div>
           </div>
-
         </TextRow>
-
-        <TextRow header={structHeader} subheader={subStructHeader}>
+        <TextRow header={structHeader} subheader={<p>{subStructHeader}</p>}>
           <div className="grid-wrapper">
             <div className="col-4">
-              <FontAwesomeIcon icon={faUsers} className="icon style7 major naked"/>
+              <FontAwesomeIcon
+                icon={faUsers}
+                className="icon style7 major naked"
+              />
               {/*<span className="icon style3 major fa-user-circle-o fit"></span>*/}
               <h3>Client Teams</h3>
-              <p>Each client team consists of 6-8 students with significant experience in data science or product
-                development.
+              <p>
+                Each client team consists of 6-8 students with significant
+                experience in data science or product development.
               </p>
             </div>
             <div className="col-4">
-              <FontAwesomeIcon icon={faMicroscope} className="icon style8 major naked"/>
+              <FontAwesomeIcon
+                icon={faMicroscope}
+                className="icon style8 major naked"
+              />
               {/*<span className="icon style3 major fa-line-chart fit"></span>*/}
               <h3>Research Teams</h3>
-              <p>Our research teams perform regular exploration of various data science fields to improve our work
-                internally.</p>
+              <p>
+                Our research teams perform regular exploration of various data
+                science fields to improve our work internally.
+              </p>
             </div>
             <div className="col-4">
-              <FontAwesomeIcon icon={faBriefcase} className="icon style9 major naked"/>
+              <FontAwesomeIcon
+                icon={faBriefcase}
+                className="icon style9 major naked"
+              />
               {/*<span className="icon style3 major fa-line-chart fit"></span>*/}
               <h3>Executive Team</h3>
-              <p>The executive team supports the client and research teams through business and operations.</p>
+              <p>
+                The executive team supports the client and research teams
+                through business and operations.
+              </p>
             </div>
           </div>
-
         </TextRow>
 
         {/* Executive */}
-        <BioTextRow header={execHeader} subheader={subExecHeader}>
-
+        <BioTextRow header={execHeader} subheader={<p>{subExecHeader}</p>}>
           <div className="biocards-holder">
+            {memberData &&
+              memberData[0].Executive.map((member, index) => {
+                let imageID = member.photo_id
+                  ? member.photo_id
+                  : member.name.replace(/[^A-Z0-9]/gi, '')
 
-            {memberData && memberData[0].Executive.map((member, index) => {
-
-              let imageID = (member.photo_id) ? member.photo_id : member.name.replace(/[^A-Z0-9]/ig, '')
-
-              return (
-                <BioCard
-                  key={index}
-                  name={member.name}
-                  position={member.position}
-                  year={member.year}
-                  major={member.major}
-                  portfolio_url={member.portfolio_url}
-                  github_url={member.github_url}
-                  linkedin_url={member.linkedin_url}
-                  image_sizes={imageData[imageID].sizes}
-                />
-              )
-            })}
-
+                return (
+                  <BioCard
+                    key={index}
+                    name={member.name}
+                    position={member.position}
+                    year={member.year}
+                    major={member.major}
+                    portfolio_url={member.portfolio_url}
+                    github_url={member.github_url}
+                    linkedin_url={member.linkedin_url}
+                    image_sizes={imageData[imageID].sizes}
+                  />
+                )
+              })}
           </div>
-
         </BioTextRow>
 
         {/* Team Leads */}
-        <BioTextRow header={leadHeader} subheader={subLeadHeader}>
-
+        <BioTextRow header={leadHeader} subheader={<p>{subLeadHeader}</p>}>
           <div className="biocards-holder">
+            {memberData &&
+              memberData[1].Team_Lead.map((member, index) => {
+                let imageID = member.photo_id
+                  ? member.photo_id
+                  : member.name.replace(/[^A-Z0-9]/gi, '')
 
-            {memberData && memberData[1].Team_Lead.map((member, index) => {
-
-              let imageID = (member.photo_id) ? member.photo_id : member.name.replace(/[^A-Z0-9]/ig, '')
-
-              return (
-                <BioCard
-                  key={index}
-                  name={member.name}
-                  position={member.position}
-                  year={member.year}
-                  major={member.major}
-                  portfolio_url={member.portfolio_url}
-                  github_url={member.github_url}
-                  linkedin_url={member.linkedin_url}
-                  image_sizes={imageData[imageID].sizes}
-                />
-              )
-            })}
-
+                return (
+                  <BioCard
+                    key={index}
+                    name={member.name}
+                    position={member.position}
+                    year={member.year}
+                    major={member.major}
+                    portfolio_url={member.portfolio_url}
+                    github_url={member.github_url}
+                    linkedin_url={member.linkedin_url}
+                    image_sizes={imageData[imageID].sizes}
+                  />
+                )
+              })}
           </div>
-
         </BioTextRow>
 
         {/* Client */}
-        <BioTextRow header={teamHeader} subheader={subTeamHeader}>
+        <BioTextRow header={teamHeader} subheader={<p>{subTeamHeader}</p>}>
           <div className="biocards-holder">
+            {memberData &&
+              memberData[2].Client.map((member, index) => {
+                let imageID = member.photo_id
+                  ? member.photo_id
+                  : member.name.replace(/[^A-Z0-9]/gi, '')
 
-            {memberData && memberData[2].Client.map((member, index) => {
-
-              let imageID = (member.photo_id) ? member.photo_id : member.name.replace(/[^A-Z0-9]/ig, '')
-
-              return (
-                <BioCard
-                  key={index}
-                  name={member.name}
-                  position={member.position}
-                  year={member.year}
-                  major={member.major}
-                  portfolio_url={member.portfolio_url}
-                  github_url={member.github_url}
-                  linkedin_url={member.linkedin_url}
-                  image_sizes={imageData[imageID].sizes}
-                />
-              )
-            })}
-
+                return (
+                  <BioCard
+                    key={index}
+                    name={member.name}
+                    position={member.position}
+                    year={member.year}
+                    major={member.major}
+                    portfolio_url={member.portfolio_url}
+                    github_url={member.github_url}
+                    linkedin_url={member.linkedin_url}
+                    image_sizes={imageData[imageID].sizes}
+                  />
+                )
+              })}
           </div>
         </BioTextRow>
 
         {/* Research */}
-        <BioTextRow header={researchHeader} subheader={subResearchHeader}>
+        <BioTextRow header={researchHeader} subheader={<p>{subResearchHeader}</p>}>
           <div className="biocards-holder">
+            {memberData &&
+              memberData[3].Research.map((member, index) => {
+                let imageID = member.photo_id
+                  ? member.photo_id
+                  : member.name.replace(/[^A-Z0-9]/gi, '')
 
-            {memberData && memberData[3].Research.map((member, index) => {
-
-              let imageID = (member.photo_id) ? member.photo_id : member.name.replace(/[^A-Z0-9]/ig, '')
-
-              return (
-                <BioCard
-                  key={index}
-                  name={member.name}
-                  position={member.position}
-                  year={member.year}
-                  major={member.major}
-                  portfolio_url={member.portfolio_url}
-                  github_url={member.github_url}
-                  linkedin_url={member.linkedin_url}
-                  image_sizes={imageData[imageID].sizes}
-                />
-              )
-            })}
-
+                return (
+                  <BioCard
+                    key={index}
+                    name={member.name}
+                    position={member.position}
+                    year={member.year}
+                    major={member.major}
+                    portfolio_url={member.portfolio_url}
+                    github_url={member.github_url}
+                    linkedin_url={member.linkedin_url}
+                    image_sizes={imageData[imageID].sizes}
+                  />
+                )
+              })}
           </div>
         </BioTextRow>
-
       </Layout>
     )
   }
 }
 
-export default compose(
-)(Apply)
+export default compose()(Apply)

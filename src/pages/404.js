@@ -27,7 +27,7 @@ class NotFoundPage extends Component {
       >
         <Helmet title={siteTitle}/>
 
-        <TextRow header={header} subheader={subHeader}/>
+        <TextRow header={header} subheader={<p>{subHeader}</p>}/>
 
 
       </Layout>

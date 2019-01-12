@@ -8,33 +8,39 @@ import Layout from '../components/layout'
 import { Link } from 'gatsby'
 import TextRow from '../components/TextRow'
 
-
 class Contact extends Component {
-
   static propTypes = {}
 
   state = {}
 
   render() {
-    const siteTitle = 'Contact Us'
+    const siteTitle = 'CONTACT US'
     const subTitle = 'Reach out with client inquiries'
     const header = 'Our Core Values'
-    const subHeader = 'LionBase is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications.'
+    const subHeader =
+      'LionBase is a data product development group that aims to connect driven students interested in data science, product design, statistics, or computer science with meaningful industry applications.'
     return (
       <Layout
         title={siteTitle}
-        subtitle={subTitle}
+        subtitle={
+          <span>
+            Fill out our inquiry form{' '}
+            <a href="https://lionbase1.typeform.com/to/ZQXVCO" target="_blank">
+              <span className="highlight">here</span>
+            </a>
+          </span>
+        }
       >
-        <Helmet title={siteTitle}/>
-        <TextRow
+        <Helmet title={siteTitle} />
+        {/* <TextRow
           header="Email us at"
-          subheader="lionbase.nyc@gmail.com"
-        />
-
+          subheader={
+            
+          }
+        /> */}
       </Layout>
     )
   }
 }
 
-export default compose(
-)(Contact)
+export default compose()(Contact)

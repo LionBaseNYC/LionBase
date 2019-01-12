@@ -20,9 +20,7 @@ class TextRow extends Component {
               <header className="major">
                 <h2>{header}</h2>
               </header>
-              <p>
                 {subheader}
-              </p>
             </div>
           </div>
           {children}
