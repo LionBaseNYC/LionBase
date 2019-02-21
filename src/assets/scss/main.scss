@@ -1189,6 +1189,12 @@ button,
         }
       }
     }
+    .highlight {
+      background-color: _palette(accent4);
+      padding-left: 0.2em;
+      padding-right: 0.2em;
+      color: white;
+    }
 
   }
 
@@ -1222,6 +1228,40 @@ button,
     .page-section {
       max-width: 900px;
       margin: 0 auto;
+    }
+  }
+
+  &.style5 {
+    background: _palette(secondary3);
+    text-align: center;
+
+    .page-section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .highlight {
+      background-color: _palette(accent7);
+      padding-left: 0.2em;
+      padding-right: 0.2em;
+      color: white;
+    }
+  }
+
+  &.style6 {
+    background: _palette(accent7);
+    text-align: center;
+
+    .page-section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .highlight {
+      background-color: _palette(accent7);
+      padding-left: 0.2em;
+      padding-right: 0.2em;
+      color: white;
     }
   }
 

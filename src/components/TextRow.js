@@ -6,15 +6,16 @@ class TextRow extends Component {
   static defaultProps = {
     header: 'Header',
     subheader: 'Subheader',
+    className: 'style1',
   }
 
 
   render() {
-    const { header, subheader, children } = this.props
+    const { header, subheader, className, children } = this.props
 
     return (
       <div>
-        <section id="one" className="main style1">
+        <section id="one" className={`main ${className}`}>
           <div className="page-section-wrapper">
             <div className="page-section">
               <header className="major">
