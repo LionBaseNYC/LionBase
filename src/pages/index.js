@@ -137,8 +137,8 @@ class Homepage extends React.Component {
           header={
             <Fragment>
               <a href="https://nyc.us19.list-manage.com/subscribe?u=6022933505ac842dc380ce193&id=7b5102c35c"
-              target="_blank">
-              <span className="highlight">Subscribe</span>
+                 target="_blank">
+                <span className="highlight">Subscribe</span>
               </a> to the Sunday Byte.
             </Fragment>
           }

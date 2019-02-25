@@ -1,11 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 class BioCard extends React.Component {
 
@@ -19,20 +18,19 @@ class BioCard extends React.Component {
     github_url: '',
     linkedin_url: '',
     image_sizes: null, // ImageSharp Gatsby https://medium.com/@kyle.robert.gill/ridiculously-easy-image-optimization-with-gatsby-js-59d48e15db6e
-  }
+  };
 
-
-  render() {
+  render () {
     const {
       key,
       name, position, year, major,
       portfolio_url, github_url, linkedin_url,
       image_sizes,
-    } = this.props
+    } = this.props;
     // const image_url = name.replace(/\s/g, '');
     // import image from image_src
     // var icon_render = (icon === null) ? null : <span className={"icon major " + icon}></span>
-console.log(major)
+    // console.log(major);
     return (
       <div className="biocard-column">
         <div className="biocard">
@@ -61,7 +59,7 @@ console.log(major)
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
@@ -75,6 +73,6 @@ BioCard.propTypes = {
   github_url: PropTypes.string.isRequired,
   linkedin_url: PropTypes.string.isRequired,
   image_sizes: PropTypes.object.isRequired,
-}
+};
 
-export default BioCard
+export default BioCard;

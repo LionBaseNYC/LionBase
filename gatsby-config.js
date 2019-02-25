@@ -2,14 +2,25 @@ const path = require(`path`);
 
 module.exports = {
   siteMetadata: {
-    title: "LionBase",
-    author: "Alex, Kev, and Tommy",
-    description: "Student collaboration @ CU."
+    title: 'LionBase',
+    author: 'Alex, Kev, and Tommy',
+    description: 'Student collaboration @ CU.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
+    // Google Analytics
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-135046735-1',
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Avoids sending pageview hits from custom paths
+        exclude: ['/preview/**', '/do-not-track/me/too/'],
+      },
+    },
 
     // IMAGE API
     {
@@ -31,7 +42,7 @@ module.exports = {
         path: path.join(__dirname, `src`, `assets`, 'images'),
       },
     },
-    `gatsby-transformer-sharp`, 
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
 
     // JSON API

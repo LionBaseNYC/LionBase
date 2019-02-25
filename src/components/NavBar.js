@@ -1,17 +1,17 @@
-import React, { Component } from 'react'
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
-import { compose } from 'react-compose'
+import React, { Component } from 'react';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import { compose } from 'react-compose';
 
-import "../assets/scss/navbar.scss";
+import '../assets/scss/navbar.scss';
 
 import { bubble as Menu } from 'react-burger-menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 class NavBar extends Component {
 
-  constructor(props) {
+  constructor (props) {
     super(props);
     // state = {
     //   sideMenuIsOpen: false
@@ -22,7 +22,7 @@ class NavBar extends Component {
   //   this.setState({sideMenuIsOpen: false})
   // }
 
-  render() {
+  render () {
 
     return (
       <React.Fragment>
@@ -31,9 +31,9 @@ class NavBar extends Component {
             <Link to="/">LionBase</Link>
           </div>
           <div className="grow"></div>
-          <Menu 
+          <Menu
             right
-            customBurgerIcon={<FontAwesomeIcon icon={faBars} />}
+            customBurgerIcon={<FontAwesomeIcon icon={faBars}/>}
             customCrossIcon={<FontAwesomeIcon icon={faTimes}/>}
             disableCloseOnEsc
             noOverlay
@@ -74,9 +74,9 @@ class NavBar extends Component {
         </div>
 
       </React.Fragment>
-    )
+    );
   }
 }
 
 export default compose(
-)(NavBar)
+)(NavBar);

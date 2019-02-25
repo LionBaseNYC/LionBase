@@ -1,16 +1,16 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { compose } from 'react-compose'
-import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { compose } from 'react-compose';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
 
-import Layout from '../components/layout'
-import BioCard from '../components/BioCard'
+import Layout from '../components/layout';
+import BioCard from '../components/BioCard';
 
-import '../assets/scss/about.scss'
+import '../assets/scss/about.scss';
 
-import TextRow from '../components/TextRow'
-import BioTextRow from '../components/TextRow'
+import TextRow from '../components/TextRow';
+import BioTextRow from '../components/TextRow';
 import {
   faUserCircle,
   faHandshake,
@@ -24,8 +24,8 @@ import {
   faCode,
   faBolt,
   faCalendar,
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const query = graphql`
   query {
@@ -63,7 +63,27 @@ export const query = graphql`
               github_url
               portfolio_url
             }
+            Product_Dev {
+              name
+              position
+              year
+              major
+              photo_id
+              linkedin_url
+              github_url
+              portfolio_url
+            }
             Research {
+              name
+              position
+              year
+              major
+              photo_id
+              linkedin_url
+              github_url
+              portfolio_url
+            }
+            Advisors {
               name
               position
               year
@@ -91,35 +111,35 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 class Apply extends Component {
-  static propTypes = {}
+  static propTypes = {};
 
   state = {
     imageData: null,
     memberData: null,
-  }
+  };
 
-  componentDidMount() {
-    const imageDict = {}
-    const headshotData = this.props.data.headshots.edges
+  componentDidMount () {
+    const imageDict = {};
+    const headshotData = this.props.data.headshots.edges;
 
     for (var i = 0; i < headshotData.length; i++) {
       imageDict[headshotData[i].node.name] = {
         // 'id': headshotData[i].node.id,
         name: headshotData[i].node.name,
         sizes: headshotData[i].node.childImageSharp.sizes,
-      }
+      };
     }
 
     this.setState({
       memberData: this.props.data.members.edges[0].node.Teams,
       imageData: imageDict,
-    })
+    });
   }
 
-  render() {
+  render () {
     // console.log(images);
     const siteTitle = 'ABOUT US',
       subTitle = 'Learn more about who we are and what we do',
@@ -135,16 +155,23 @@ class Apply extends Component {
       subLeadHeader = 'Meet the client-facing project leads',
       teamHeader = 'Client Team Members',
       subTeamHeader =
-        'Meet the people who build our products alongside the team leads',
+        'Meet the people who build data science and product development solutions for our clients',
       researchHeader = 'Research Team Members',
       subResearchHeader =
-        'Meet the people expanding our understanding of data science'
+        'Meet the people expanding our understanding of data science',
+      pdHeader = 'Product Development Team Members',
+      subPdHeader =
+        'Meet the people who work closely with our client teams to build and deploy our products',
+      advisorHeader = 'Advisors',
+      subAdvisorHeader =
+        'Meet our advisors';
 
-    const { memberData, imageData } = this.state
+    const { memberData, imageData } = this.state;
+    // console.log(memberData)
 
     return (
       <Layout title={siteTitle} subtitle={subTitle}>
-        <Helmet title={siteTitle} />
+        <Helmet title={siteTitle}/>
 
         {/* KEV TODO */}
         {/* <BioCard name={} title={} major={} portfolio_url={}/> */}
@@ -152,7 +179,7 @@ class Apply extends Component {
           <ul className="major-icons card-container">
             <li>
               <div className="grid-card">
-                <FontAwesomeIcon icon={faCode} className="icon style4 major" />
+                <FontAwesomeIcon icon={faCode} className="icon style4 major"/>
                 {/*<span className="icon style1 major fa-code"></span>*/}
                 <h3>Who We Are</h3>
                 <p>
@@ -163,7 +190,7 @@ class Apply extends Component {
             </li>
             <li>
               <div className="grid-card">
-                <FontAwesomeIcon icon={faBolt} className="icon style4 major" />
+                <FontAwesomeIcon icon={faBolt} className="icon style4 major"/>
                 <h3>What We Do</h3>
                 <p>
                   We focus on exploring data projects related to Data Analytics,
@@ -185,7 +212,7 @@ class Apply extends Component {
               </div>
             </li>
           </ul>
-          <div className="grid-wrapper" />
+          <div className="grid-wrapper"/>
         </section>
 
         <section id="two" className="main style4 statistics">
@@ -327,25 +354,25 @@ class Apply extends Component {
         <BioTextRow header={execHeader} subheader={<p>{subExecHeader}</p>}>
           <div className="biocards-holder">
             {memberData &&
-              memberData[0].Executive.map((member, index) => {
-                let imageID = member.photo_id
-                  ? member.photo_id
-                  : member.name.replace(/[^A-Z0-9]/gi, '')
+            memberData[0].Executive.map((member, index) => {
+              let imageID = member.photo_id
+                ? member.photo_id
+                : member.name.replace(/[^A-Z0-9]/gi, '');
 
-                return (
-                  <BioCard
-                    key={index}
-                    name={member.name}
-                    position={member.position}
-                    year={member.year}
-                    major={member.major}
-                    portfolio_url={member.portfolio_url}
-                    github_url={member.github_url}
-                    linkedin_url={member.linkedin_url}
-                    image_sizes={imageData[imageID].sizes}
-                  />
-                )
-              })}
+              return (
+                <BioCard
+                  key={index}
+                  name={member.name}
+                  position={member.position}
+                  year={member.year}
+                  major={member.major}
+                  portfolio_url={member.portfolio_url}
+                  github_url={member.github_url}
+                  linkedin_url={member.linkedin_url}
+                  image_sizes={imageData[imageID].sizes}
+                />
+              );
+            })}
           </div>
         </BioTextRow>
 
@@ -353,25 +380,51 @@ class Apply extends Component {
         <BioTextRow header={leadHeader} subheader={<p>{subLeadHeader}</p>}>
           <div className="biocards-holder">
             {memberData &&
-              memberData[1].Team_Lead.map((member, index) => {
-                let imageID = member.photo_id
-                  ? member.photo_id
-                  : member.name.replace(/[^A-Z0-9]/gi, '')
+            memberData[1].Team_Lead.map((member, index) => {
+              let imageID = member.photo_id
+                ? member.photo_id
+                : member.name.replace(/[^A-Z0-9]/gi, '');
 
-                return (
-                  <BioCard
-                    key={index}
-                    name={member.name}
-                    position={member.position}
-                    year={member.year}
-                    major={member.major}
-                    portfolio_url={member.portfolio_url}
-                    github_url={member.github_url}
-                    linkedin_url={member.linkedin_url}
-                    image_sizes={imageData[imageID].sizes}
-                  />
-                )
-              })}
+              return (
+                <BioCard
+                  key={index}
+                  name={member.name}
+                  position={member.position}
+                  year={member.year}
+                  major={member.major}
+                  portfolio_url={member.portfolio_url}
+                  github_url={member.github_url}
+                  linkedin_url={member.linkedin_url}
+                  image_sizes={imageData[imageID].sizes}
+                />
+              );
+            })}
+          </div>
+        </BioTextRow>
+
+        {/* Product Dev */}
+        <BioTextRow header={pdHeader} subheader={<p>{subPdHeader}</p>}>
+          <div className="biocards-holder">
+            {memberData &&
+            memberData[3].Product_Dev.map((member, index) => {
+              let imageID = member.photo_id
+                ? member.photo_id
+                : member.name.replace(/[^A-Z0-9]/gi, '');
+
+              return (
+                <BioCard
+                  key={index}
+                  name={member.name}
+                  position={member.position}
+                  year={member.year}
+                  major={member.major}
+                  portfolio_url={member.portfolio_url}
+                  github_url={member.github_url}
+                  linkedin_url={member.linkedin_url}
+                  image_sizes={imageData[imageID].sizes}
+                />
+              );
+            })}
           </div>
         </BioTextRow>
 
@@ -379,25 +432,25 @@ class Apply extends Component {
         <BioTextRow header={teamHeader} subheader={<p>{subTeamHeader}</p>}>
           <div className="biocards-holder">
             {memberData &&
-              memberData[2].Client.map((member, index) => {
-                let imageID = member.photo_id
-                  ? member.photo_id
-                  : member.name.replace(/[^A-Z0-9]/gi, '')
+            memberData[2].Client.map((member, index) => {
+              let imageID = member.photo_id
+                ? member.photo_id
+                : member.name.replace(/[^A-Z0-9]/gi, '');
 
-                return (
-                  <BioCard
-                    key={index}
-                    name={member.name}
-                    position={member.position}
-                    year={member.year}
-                    major={member.major}
-                    portfolio_url={member.portfolio_url}
-                    github_url={member.github_url}
-                    linkedin_url={member.linkedin_url}
-                    image_sizes={imageData[imageID].sizes}
-                  />
-                )
-              })}
+              return (
+                <BioCard
+                  key={index}
+                  name={member.name}
+                  position={member.position}
+                  year={member.year}
+                  major={member.major}
+                  portfolio_url={member.portfolio_url}
+                  github_url={member.github_url}
+                  linkedin_url={member.linkedin_url}
+                  image_sizes={imageData[imageID].sizes}
+                />
+              );
+            })}
           </div>
         </BioTextRow>
 
@@ -405,30 +458,56 @@ class Apply extends Component {
         <BioTextRow header={researchHeader} subheader={<p>{subResearchHeader}</p>}>
           <div className="biocards-holder">
             {memberData &&
-              memberData[3].Research.map((member, index) => {
-                let imageID = member.photo_id
-                  ? member.photo_id
-                  : member.name.replace(/[^A-Z0-9]/gi, '')
+            memberData[4].Research.map((member, index) => {
+              let imageID = member.photo_id
+                ? member.photo_id
+                : member.name.replace(/[^A-Z0-9]/gi, '');
 
-                return (
-                  <BioCard
-                    key={index}
-                    name={member.name}
-                    position={member.position}
-                    year={member.year}
-                    major={member.major}
-                    portfolio_url={member.portfolio_url}
-                    github_url={member.github_url}
-                    linkedin_url={member.linkedin_url}
-                    image_sizes={imageData[imageID].sizes}
-                  />
-                )
-              })}
+              return (
+                <BioCard
+                  key={index}
+                  name={member.name}
+                  position={member.position}
+                  year={member.year}
+                  major={member.major}
+                  portfolio_url={member.portfolio_url}
+                  github_url={member.github_url}
+                  linkedin_url={member.linkedin_url}
+                  image_sizes={imageData[imageID].sizes}
+                />
+              );
+            })}
+          </div>
+        </BioTextRow>
+
+        {/* Advisors */}
+        <BioTextRow header={advisorHeader} subheader={<p>{subAdvisorHeader}</p>}>
+          <div className="biocards-holder">
+            {memberData &&
+            memberData[5].Advisors.map((member, index) => {
+              let imageID = member.photo_id
+                ? member.photo_id
+                : member.name.replace(/[^A-Z0-9]/gi, '');
+
+              return (
+                <BioCard
+                  key={index}
+                  name={member.name}
+                  position={member.position}
+                  year={member.year}
+                  major={member.major}
+                  portfolio_url={member.portfolio_url}
+                  github_url={member.github_url}
+                  linkedin_url={member.linkedin_url}
+                  image_sizes={imageData[imageID].sizes}
+                />
+              );
+            })}
           </div>
         </BioTextRow>
       </Layout>
-    )
+    );
   }
 }
 
-export default compose()(Apply)
+export default compose()(Apply);
