@@ -100,7 +100,7 @@
     }
     .biocard {
       //width: 300px;
-      height: 365px;
+      height: 420px;
     }
   }
 }
@@ -112,11 +112,11 @@
   }
 }
 
-@include breakpoint(large) {
-  .biocards-holder {
-    .biocard {
-      //width: 300px;
-      height: 350px;
-    }
-  }
-}
+//@include breakpoint(large) {
+//  .biocards-holder {
+//    .biocard {
+//      //width: 300px;
+//      height: 350px;
+//    }
+//  }
+//}

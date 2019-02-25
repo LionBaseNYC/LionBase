@@ -315,22 +315,6 @@
           "biography": ""
         },
         {
-          "name": "Frank Zhai",
-          "email": "xz2791@columbia.edu",
-          "position": "Client Team",
-          "year": "Junior",
-          "major": "Operations Research",
-          "ethnicity": "Asian/Pacific Islander",
-          "gender": "Male",
-          "photo_id": "XinchenZhai",
-          "linkedin_url": "https://www.linkedin.com/in/xinchen-zhai/",
-          "github_url": "",
-          "portfolio_url": "",
-          "financial_aid": "Yes",
-          "first_gen": "",
-          "biography": "junior student major in Operations Research. Previous projects including \"Hand written formula recognition\", \"House price prediction\", \"AdTracking Fraud Detection"
-        },
-        {
           "name": "Hidy Yi",
           "email": "hy2505@columbia.edu",
           "position": "Client Team",
@@ -425,22 +409,6 @@
           "financial_aid": "No",
           "first_gen": "No",
           "biography": ""
-        },
-        {
-          "name": "Gitika Bose",
-          "email": "gb2606@columbia.edu",
-          "position": "Client Team",
-          "year": "Sophomore",
-          "major": "Computer Science",
-          "ethnicity": "Asian/Pacific Islander",
-          "gender": "Female",
-          "photo_id": "",
-          "linkedin_url": "https://www.linkedin.com/in/gitikabose/",
-          "github_url": "",
-          "portfolio_url": "",
-          "financial_aid": "No",
-          "first_gen": "No",
-          "biography": "I am a sophomore studying Computer Science and Applied Mathematics at Columbia. Through recent internships at various startups and organizations such as OM Cash, Diligence Vault, and ADI Labs I have gained experience in the field of data science. I now hope to use these experiences to develop creative product solutions effectively and make an impact."
         },
         {
           "name": "Logan Thomas Troy",
@@ -627,22 +595,6 @@
           "biography": "I grew up and studied in a distant village in Turkmenistan, and luckily could be able to get into Columbia University. I love stepping out of my comfort zone and this is the main reason I wanted to go a country whose language I could barely speak at first. In Columbia I am majoring in Economics and Computer science. I've spent my summer serving as a RA for an economics professor in Columbia. I also tutored in Academic Success Program (ASP) in Columbia past summer. This semester I've been serving as a TA for Linear Algebra class in Columbia's Mathematics department."
         },
         {
-          "name": "Miriam Linz",
-          "email": "ml4223@columbia.edu",
-          "position": "Research Team",
-          "year": "Sophomore",
-          "major": "Philosophy & Computer Science",
-          "ethnicity": "White",
-          "gender": "Female",
-          "photo_id": "",
-          "linkedin_url": "https://www.linkedin.com/in/miriam-linz-b86a14173/",
-          "github_url": "",
-          "portfolio_url": "",
-          "financial_aid": "",
-          "first_gen": "",
-          "biography": "Student interested in working in the realm of tech or business, especially interested in the realm of start-ups. Originally from Australia, I am now studying Computer Science and Philosophy at Columbia University. I love analyzing problems, finding flaws in logic and picking apart problems. I enjoy writing and finding create ways to address problems and working with a team toward an innovative solution."
-        },
-        {
           "name": "Aileen Cano",
           "email": "ac4440@columbia.edu",
           "position": "Research Team",
@@ -657,22 +609,6 @@
           "financial_aid": "Yes",
           "first_gen": "Yes",
           "biography": "Hello! My name is Aileen Cano and I am a current first year student at Columbia University. I am interested in majoring in computer science and political science."
-        },
-        {
-          "name": "Haley So",
-          "email": "h.so@columbia.edu",
-          "position": "Research Team",
-          "year": "Junior",
-          "major": "Electrical Engineering",
-          "ethnicity": "Asian/Pacific Islander",
-          "gender": "Female",
-          "photo_id": "",
-          "linkedin_url": "https://www.linkedin.com/in/haleyso/",
-          "github_url": "https://github.com/haleyso",
-          "portfolio_url": "",
-          "financial_aid": "",
-          "first_gen": "",
-          "biography": "Haley is a junior majoring in Electrical Engineering minoring in Computer Science with a passion for using data for social good. She's interested in harnessing tech for a wide range of fields, from the medical field to building community. In LionBase, she's eager to make positive contributions, to find creative solutions for society, and to learn the tools that make it possible."
         },
         {
           "name": "Huijuan Zhang",
@@ -705,22 +641,6 @@
           "financial_aid": "No",
           "first_gen": "No",
           "biography": "Freshman at Columbia College Planning to Major in Math and Stats."
-        },
-        {
-          "name": "Tejit Pabari",
-          "email": "tvp2107@columbia.edu",
-          "position": "Research Team",
-          "year": "Sophomore",
-          "major": "Computer Science",
-          "ethnicity": "Asian/Pacific Islander",
-          "gender": "Male",
-          "photo_id": "",
-          "linkedin_url": "https://www.linkedin.com/in/tejitpabari/",
-          "github_url": "https://github.com/tejitpabari99/",
-          "portfolio_url": "",
-          "financial_aid": "",
-          "first_gen": "",
-          "biography": "I am a sophomore in Columbia University (SEAS), pursuing Computer Science. I am currently working as a Data Science Intern at a startup, web-scraping data and developing NLP algorithms. I have made two Android and IOS apps, with one at the beta review stage and have experience with React-Native, HTML, CSS, Javascript, Node.js I am also well versed with Python and Database management in SQL. I have used AWS and Firebase, with server hosting on Google Cloud and 3rd party API integration such as Twillio, Sendgrid and Google Places API. \nCurrently, I am interested in Back-End, Data Science and Machine Learning and AI opportunities."
         },
         {
           "name": "Brandon Zhang",
@@ -849,38 +769,6 @@
           "financial_aid": "",
           "first_gen": "",
           "biography": "Uzay grew up in Istanbul, Turkey. He is currently majoring in Computer Science at Columbia University, New York. His primary research interests are machine learning, artificial neural networks, and he likes spending time on challenging, state-of-art data science problems. \nHe has experience in a wide variety of programming languages including Python, Java, C#, HTML, CSS, and JavaScript, and is skilled in full-stack web development, object-oriented programming, ML modeling, data analysis, and cloud computing. He has recently been improving on his mobile app development skills.  \nWhenever he is free, he likes playing or watching basketball, checking out new restaurants in NYC, spending time with his friends and surfing the Internet."
-        },
-        {
-          "name": "Nitasha Nair",
-          "email": "nn2427@columbia.edu",
-          "position": "Research Team",
-          "year": "Graduate Student",
-          "major": "Environmental Policy",
-          "ethnicity": "Asian/Pacific Islander",
-          "gender": "Female",
-          "photo_id": "",
-          "linkedin_url": "https://www.linkedin.com/in/nitasha-nair-198974a/",
-          "github_url": "",
-          "portfolio_url": "",
-          "financial_aid": "No",
-          "first_gen": "No",
-          "biography": "Nitasha Nair is an environment policy and management professional with over 8 years of experience in research, marketing and Information Technology. She has worked with a diverse range of organizations like the International Water Management Institute(CGIAR), State Government agency in India and a global Technology firm. Nitasha is currently pursuing her Master of Public Administration degree at Columbia University, with a concentration in Energy and Environment."
-        },
-        {
-          "name": "Brennan McManus",
-          "email": "bm2530@columbia.edu",
-          "position": "Research Team",
-          "year": "Junior",
-          "major": "Linguistics & Computer Science",
-          "ethnicity": "White",
-          "gender": "Male",
-          "photo_id": "BrennanXavierMcManus",
-          "linkedin_url": "linkedin.com/in/brennan-mcmanus",
-          "github_url": "https://github.com/brennan913/",
-          "portfolio_url": "",
-          "financial_aid": "No",
-          "first_gen": "No",
-          "biography": "Junior studying Computer Science and Linguistics, interested in computational linguistics and data science."
         },
         {
           "name": "Peranut Nimitsurachat",
